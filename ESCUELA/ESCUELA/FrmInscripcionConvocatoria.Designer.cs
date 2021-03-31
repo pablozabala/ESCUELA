@@ -44,6 +44,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox1.Controls.Add(this.txtIdConvocatoria);
             this.groupBox1.Controls.Add(this.btnPuntaje);
             this.groupBox1.Controls.Add(this.btnGrabar);
@@ -81,7 +82,8 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnGrabar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGrabar.ForeColor = System.Drawing.Color.White;
             this.btnGrabar.Location = new System.Drawing.Point(134, 125);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 31);
@@ -138,6 +140,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(26, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 20);

@@ -60,11 +60,12 @@
             this.Grupo.Size = new System.Drawing.Size(353, 131);
             this.Grupo.TabIndex = 20;
             this.Grupo.TabStop = false;
-            this.Grupo.Text = "Tipos de prenda";
+            this.Grupo.Text = "Convocatoria";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(17, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 17);
@@ -91,6 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(17, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 17);

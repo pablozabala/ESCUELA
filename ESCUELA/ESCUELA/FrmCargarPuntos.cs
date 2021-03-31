@@ -71,9 +71,10 @@ namespace ESCUELA
             }
             Double Puntaje = Convert.ToDouble(txtPuntaje.Text);
             Int32 Categoria = Convert.ToInt32(txtCategoria.Text);
+            Int32 IdConvocatoria = Convert.ToInt32(Principal.Codigo);
             string dni = txtDni.Text;
             cConvocatoria con = new cConvocatoria();
-            con.CargarPuntaje(Puntaje, Categoria, dni);
+            con.CargarPuntaje(Puntaje, Categoria, dni, IdConvocatoria);
             Buscar(Principal.Codigo);
             Mensaje("Datos grabados correctamente");
         }
@@ -93,6 +94,11 @@ namespace ESCUELA
             cConvocatoria con = new cConvocatoria();
             DataTable trdo = con.GetConvocatoriaDocentexIdOrdenadaPuntaje(Principal.Codigo);
             Grilla.DataSource = trdo;
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
 
         }
     }
