@@ -16,8 +16,8 @@ namespace ESCUELA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-              Application.Run(new FrmInscripcionConvocatoria());
-            //  Application.Run(new Principal());
+          //    Application.Run(new FrmInscripcionConvocatoria());
+              Application.Run(new Principal());
          //   Application.Run(new FrmAbmConvocatoria());
         }
     }
