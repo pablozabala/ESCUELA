@@ -127,5 +127,17 @@ namespace ESCUELA
         {
 
         }
+
+        private void docenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAbmDocente fr = new ESCUELA.FrmAbmDocente();
+            fr.Show();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistroCargo frm = new FrmRegistroCargo();
+            frm.Show();
+        }
     }
 }

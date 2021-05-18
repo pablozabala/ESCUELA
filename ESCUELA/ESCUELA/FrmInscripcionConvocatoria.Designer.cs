@@ -44,7 +44,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox1.Controls.Add(this.txtIdConvocatoria);
             this.groupBox1.Controls.Add(this.btnPuntaje);
             this.groupBox1.Controls.Add(this.btnGrabar);
@@ -54,7 +53,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.CmbConvocatoria);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 297);
@@ -65,9 +64,10 @@
             // 
             // txtIdConvocatoria
             // 
+            this.txtIdConvocatoria.Enabled = false;
             this.txtIdConvocatoria.Location = new System.Drawing.Point(371, 37);
             this.txtIdConvocatoria.Name = "txtIdConvocatoria";
-            this.txtIdConvocatoria.Size = new System.Drawing.Size(63, 26);
+            this.txtIdConvocatoria.Size = new System.Drawing.Size(63, 23);
             this.txtIdConvocatoria.TabIndex = 8;
             // 
             // btnPuntaje
@@ -82,8 +82,8 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGrabar.ForeColor = System.Drawing.Color.White;
+            this.btnGrabar.BackColor = System.Drawing.Color.White;
+            this.btnGrabar.ForeColor = System.Drawing.Color.Black;
             this.btnGrabar.Location = new System.Drawing.Point(134, 125);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 31);
@@ -96,16 +96,16 @@
             // 
             this.txtDni.Location = new System.Drawing.Point(134, 96);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(103, 26);
+            this.txtDni.Size = new System.Drawing.Size(103, 23);
             this.txtDni.TabIndex = 5;
             this.txtDni.TextChanged += new System.EventHandler(this.txtDni_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 96);
+            this.label3.Location = new System.Drawing.Point(6, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 20);
+            this.label3.Size = new System.Drawing.Size(32, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Dni";
             // 
@@ -120,9 +120,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 67);
+            this.label2.Location = new System.Drawing.Point(6, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Docente";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -131,19 +131,18 @@
             // 
             this.CmbConvocatoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbConvocatoria.FormattingEnabled = true;
-            this.CmbConvocatoria.Location = new System.Drawing.Point(146, 37);
+            this.CmbConvocatoria.Location = new System.Drawing.Point(134, 37);
             this.CmbConvocatoria.Name = "CmbConvocatoria";
-            this.CmbConvocatoria.Size = new System.Drawing.Size(219, 28);
+            this.CmbConvocatoria.Size = new System.Drawing.Size(219, 24);
             this.CmbConvocatoria.TabIndex = 1;
             this.CmbConvocatoria.SelectedIndexChanged += new System.EventHandler(this.CmbConvocatoria_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(26, 37);
+            this.label1.Location = new System.Drawing.Point(6, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
+            this.label1.Size = new System.Drawing.Size(103, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Convocatoria";
             this.label1.Click += new System.EventHandler(this.label1_Click);

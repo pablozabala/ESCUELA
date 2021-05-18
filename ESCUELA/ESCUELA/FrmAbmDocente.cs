@@ -10,15 +10,15 @@ using System.Windows.Forms;
 using ESCUELA.Clases;
 namespace ESCUELA
 {
-    public partial class FrmAbmConvocatoria : FrmBase 
+    public partial class FrmAbmDocente : FormBase
     {
         cFunciones fun;
-        public FrmAbmConvocatoria()
+        public FrmAbmDocente()
         {
             InitializeComponent();
         }
 
-        private void FrmAbmConvocatoria_Load(object sender, EventArgs e)
+        private void FrmAbmDocente_Load(object sender, EventArgs e)
         {
             fun = new Clases.cFunciones();
             Botonera(1);
@@ -65,31 +65,68 @@ namespace ESCUELA
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txt_Descripcion.Text =="")
+            if (txt_NroDoc.Text  == "")
             {
-                MessageBox.Show("Debe ingresar un nomre para continuar");
+                Mensaje("Debe ingresar un número de documento");
                 return;
             }
-            if (txtCodigo.Text == "")
-                fun.GuardarNuevoGenerico(this, "Convocatoria");
+            if (txt_Apellido.Text == "")
+            {
+                Mensaje("Debe ingresar un apellido");
+                return;
+            }
+              
+            if (txt_Nombre.Text == "")
+            {
+                Mensaje("Debe ingresar un nombre");
+                return;
+            }
+
+            if (txtCodDocente.Text == "")
+                fun.GuardarNuevoGenerico(this, "Docente");
             else
             {
                 // if (txt_Ruta.Text != "")
                 //   txt_Ruta.Text = txt_Ruta.Text.Replace("\\", "\\\\");
-                fun.ModificarGenerico(this, "Convocatoria", "IdConvocatoria", txtCodigo.Text);
+                fun.ModificarGenerico(this, "Docente", "IdDocente", txtCodDocente.Text);
 
             }
             Mensaje("Datos grabados correctamente");
-            txtCodigo.Text = "";
-           
+            fun.LimpiarGenerico(this);
+            Grupo.Enabled = false;
+            Botonera(1);
+        }
 
+        private void txt_NroDoc_TextChanged(object sender, EventArgs e)
+        {
+            string NroDoc = txt_NroDoc.Text;
+            if (NroDoc.Length >6)
+            {
+                cDocente doc = new Clases.cDocente();
+                DataTable trdo = doc.GetDocentexDni(NroDoc);
+                if (trdo.Rows.Count >0)
+                {
+                    txt_Apellido.Text = trdo.Rows[0]["Apellido"].ToString();
+                    txt_Nombre.Text = trdo.Rows[0]["Nombre"].ToString();
+                    txt_Email.Text = trdo.Rows[0]["Email"].ToString();
+                    txtCodDocente.Text = trdo.Rows[0]["IdDocente"].ToString();
+                    txt_Celular.Text = trdo.Rows[0]["Celular"].ToString();
+                }
+                else
+                {
+                    txtCodDocente.Text = "";
+                    txt_Apellido.Text = "";
+                    txt_Nombre.Text = "";
+                    txt_Email.Text = "";
+                }
+            }
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            Principal.OpcionesdeBusqueda = "IdConvocatoria;Descripcion";
-            Principal.TablaPrincipal = "Convocatoria";
-            Principal.OpcionesColumnasGrilla = "IdConvocatoria;Descripcion;FechaFin";
+            Principal.OpcionesdeBusqueda = "Apellido";
+            Principal.TablaPrincipal = "Docente";
+            Principal.OpcionesColumnasGrilla = "IdDocente;Apellido;Nombre";
             Principal.ColumnasVisibles = "0;1;1";
             Principal.ColumnasAncho = "0;390;190";
             FrmBuscadorGenerico form = new FrmBuscadorGenerico();
@@ -99,36 +136,28 @@ namespace ESCUELA
 
         private void form_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
             if (Principal.CodigoPrincipalAbm != null)
             {
                 Botonera(3);
-                txtCodigo.Text = Principal.CodigoPrincipalAbm.ToString();
+                txtCodDocente.Text = Principal.CodigoPrincipalAbm.ToString();
                 cFunciones fun = new Clases.cFunciones();
-                fun.CargarControles(this, "Convocatoria", "IdConvocatoria", txtCodigo.Text);                
+                fun.CargarControles(this, "Docente", "IdDocente", txtCodDocente.Text);
             }
 
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-             Botonera(2);
+            Botonera(2);
             Grupo.Enabled = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Grupo_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            Botonera(1);
+            fun.LimpiarGenerico(this);
+            Grupo.Enabled = false;
         }
     }
 }

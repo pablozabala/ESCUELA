@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.txtDocente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Grilla = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de inscriptos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(21, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Dni";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnOrdenar
             // 
@@ -108,11 +119,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(414, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 20);
+            this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Categoría";
+            this.label3.Text = "Posicion";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnGrabar
@@ -137,6 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(271, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
@@ -180,17 +193,6 @@
             this.Grilla.Size = new System.Drawing.Size(668, 318);
             this.Grilla.TabIndex = 0;
             this.Grilla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grilla_CellClick);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 20);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Dni";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FrmCargarPuntos
             // 

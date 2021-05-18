@@ -36,7 +36,7 @@ namespace ESCUELA.Clases
         {
             string sql = "select * from ConvocatoriaxDocente ";
             sql = sql + " where IdConvocatoria=" + Convocatoria.ToString();
-            sql = sql + " order by Categoria desc,Puntaje desc";
+            sql = sql + " order by Categoria asc ";
             return cDb.GetDatatable(sql);
         }
 

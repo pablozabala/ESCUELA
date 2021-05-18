@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ESCUELA
 {
-    public partial class FrmBuscadorGenerico : FrmBase 
+    public partial class FrmBuscadorGenerico : FormBase  
     {
         public FrmBuscadorGenerico()
         {

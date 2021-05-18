@@ -49,12 +49,26 @@
     <Compile Include="Clases\cConexion.cs" />
     <Compile Include="Clases\cConvocatoria.cs" />
     <Compile Include="Clases\cDb.cs" />
+    <Compile Include="Clases\cDocente.cs" />
     <Compile Include="Clases\cFunciones.cs" />
+    <Compile Include="Clases\cMateria.cs" />
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAbmConvocatoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAbmConvocatoria.Designer.cs">
       <DependentUpon>FrmAbmConvocatoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmDocente.Designer.cs">
+      <DependentUpon>FrmAbmDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBase.cs">
       <SubType>Form</SubType>
@@ -86,6 +100,12 @@
     <Compile Include="FrmRegistrarAsistencia.Designer.cs">
       <DependentUpon>FrmRegistrarAsistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistroCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroCargo.Designer.cs">
+      <DependentUpon>FrmRegistroCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +114,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAbmConvocatoria.resx">
       <DependentUpon>FrmAbmConvocatoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbmDocente.resx">
+      <DependentUpon>FrmAbmDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
@@ -111,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarAsistencia.resx">
       <DependentUpon>FrmRegistrarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroCargo.resx">
+      <DependentUpon>FrmRegistroCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
