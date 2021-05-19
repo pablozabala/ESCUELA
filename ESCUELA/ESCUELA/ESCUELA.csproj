@@ -46,12 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\cCargo.cs" />
     <Compile Include="Clases\cConexion.cs" />
     <Compile Include="Clases\cConvocatoria.cs" />
     <Compile Include="Clases\cDb.cs" />
     <Compile Include="Clases\cDocente.cs" />
     <Compile Include="Clases\cFunciones.cs" />
-    <Compile Include="Clases\cMateria.cs" />
+    <Compile Include="cMateria.cs" />
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="FrmAbmDocente.Designer.cs">
       <DependentUpon>FrmAbmDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAltaBasica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAltaBasica.Designer.cs">
+      <DependentUpon>FrmAltaBasica.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBase.cs">
       <SubType>Form</SubType>
@@ -93,6 +100,12 @@
     </Compile>
     <Compile Include="FrmInscripcionConvocatoria.Designer.cs">
       <DependentUpon>FrmInscripcionConvocatoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoCargos.Designer.cs">
+      <DependentUpon>FrmListadoCargos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistrarAsistencia.cs">
       <SubType>Form</SubType>
@@ -123,6 +136,9 @@
     <EmbeddedResource Include="FrmAbmDocente.resx">
       <DependentUpon>FrmAbmDocente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAltaBasica.resx">
+      <DependentUpon>FrmAltaBasica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInscripcionConvocatoria.resx">
       <DependentUpon>FrmInscripcionConvocatoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoCargos.resx">
+      <DependentUpon>FrmListadoCargos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarAsistencia.resx">
       <DependentUpon>FrmRegistrarAsistencia.cs</DependentUpon>

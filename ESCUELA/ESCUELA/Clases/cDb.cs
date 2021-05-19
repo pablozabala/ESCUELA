@@ -32,5 +32,24 @@ namespace ESCUELA.Clases
             comando.ExecuteNonQuery();
             con.Close();
         }
+
+        public static Int32 EjecutarEscalarTransaccion(SqlConnection con, SqlTransaction Transaccion, string Sql)
+        {
+            Sql = Sql + "select SCOPE_IDENTITY()";
+            SqlCommand comand = new SqlCommand();
+            comand.Connection = con;
+            comand.Transaction = Transaccion;
+            comand.CommandText = Sql;
+            return Convert.ToInt32(comand.ExecuteScalar());
+        }
+
+        public static void GrabarTransaccion(SqlConnection con, SqlTransaction Transaccion, string Sql)
+        {
+            SqlCommand comand = new SqlCommand();
+            comand.Connection = con;
+            comand.Transaction = Transaccion;
+            comand.CommandText = Sql;
+            comand.ExecuteNonQuery();
+        }
     }
 }

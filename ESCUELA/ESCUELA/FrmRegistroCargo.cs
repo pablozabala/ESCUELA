@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESCUELA.Clases;
+using System.Data.SqlClient;
 namespace ESCUELA
 {
     public partial class FrmRegistroCargo : FormBase
@@ -33,12 +34,13 @@ namespace ESCUELA
             cMateria mat = new Clases.cMateria();
             DataTable trdo = mat.GetMateria();
             fun.LlenarComboDatatable(cmbMateria, trdo, "Nombre", "CodMateria");
+            fun.LlenarCombo(cmbCaracter, "Caracter", "Nombre", "CodCaracter");
         }
 
         private void txt_NroDoc_TextChanged(object sender, EventArgs e)
         {
             string NroDoc = txtNroDoc.Text;
-            if (NroDoc.Length > 6)
+            if (NroDoc.Length > 4)
             {
                 cDocente doc = new Clases.cDocente();
                 DataTable trdo = doc.GetDocentexDni(NroDoc);
@@ -60,10 +62,69 @@ namespace ESCUELA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (Validar ()==true)
+            if (Validar ()==false)
             {
-
+                return;
             }
+
+            SqlConnection con = new SqlConnection(cConexion.GetConexion());
+            con.Open();
+            SqlTransaction tran = con.BeginTransaction();
+          
+            try
+            {
+                GrabarDocente(con, tran);
+                GrabarCargo(con, tran);
+                tran.Commit();
+                con.Close();
+                Mensaje("Datos grabados correctamente");
+            }
+            catch (Exception)
+            {
+                tran.Rollback();
+                con.Close();
+                Mensaje("Hubo un erroren el proceso de grabación");
+            }
+        }
+
+        public Int32  GrabarDocente(SqlConnection con,SqlTransaction tran)
+        {
+            string Apellido = txtApellido.Text;
+            string NroDoc = txtNroDoc.Text;
+            string Nombre = txtNombre.Text;
+            string Email = txtMail.Text;
+            string Celular = txtTelefono.Text;
+            Int32 CodDocente = 0;
+            cDocente doc = new cDocente();
+            if (txtCodDocente.Text =="")
+            {
+                CodDocente = doc.GrabarDocenteTransaccion(con, tran, NroDoc, Apellido, Nombre, Email, Celular);
+                txtCodDocente.Text = CodDocente.ToString();
+            }
+            return CodDocente;
+        }
+
+        public void GrabarCargo(SqlConnection con, SqlTransaction tran)
+        {
+            Int32 CodDocente = 0;
+            Int32 CodMateria = 0;
+            string Curso = "";
+            string Division = "";
+            Int32 CodCaracter = 0;
+            DateTime FechaDesde = DateTime.Now;
+            DateTime FechaHasta = DateTime.Now;
+
+            CodDocente = Convert.ToInt32(txtCodDocente.Text);
+            CodMateria = Convert.ToInt32(cmbMateria.SelectedValue);
+            Curso = txtCurso.Text;
+            Division = txtDivision.Text;
+            CodCaracter = Convert.ToInt32(cmbCaracter.SelectedValue);
+            FechaDesde = Convert.ToDateTime(txtFechaDesde.Text);
+            FechaHasta = Convert.ToDateTime(txtFechaHasta.Text);
+
+            cCargo cargo = new cCargo();
+            cargo.InsertarCargo(con, tran, CodDocente, CodMateria, Curso, Division,
+                CodCaracter, FechaDesde, FechaHasta);
         }
 
         public Boolean Validar()
@@ -90,6 +151,12 @@ namespace ESCUELA
             if (cmbMateria.SelectedIndex <1)
             {
                 Mensaje("Debe seleccionar una materia ");
+                return false;
+            }
+
+            if (cmbCaracter.SelectedIndex  < 1)
+            {
+                Mensaje("Debe seleccionar una caracter ");
                 return false;
             }
 
@@ -126,6 +193,43 @@ namespace ESCUELA
             }
 
             return true;
+        }
+
+        private void btnAgregarMateria_Click(object sender, EventArgs e)
+        {
+            Principal.CampoIdSecundario = "CodMateria";
+            Principal.CampoNombreSecundario = "Nombre";
+            Principal.NombreTablaSecundario = "Materia";
+            FrmAltaBasica form = new FrmAltaBasica();
+            form.FormClosing += new FormClosingEventHandler(form_FormClosing);
+            form.ShowDialog();
+        }
+
+        private void form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Principal.CampoIdSecundarioGenerado != "")
+            {
+                Clases.cFunciones fun = new Clases.cFunciones();
+                switch (Principal.NombreTablaSecundario)
+                {
+
+                    case "Materia":
+                        CargarMateria();
+                        cmbMateria.SelectedValue   = Principal.CampoIdSecundarioGenerado;
+                        break;                    
+                }
+            }
+            
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

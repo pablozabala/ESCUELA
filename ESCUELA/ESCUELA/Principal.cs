@@ -82,12 +82,12 @@ namespace ESCUELA
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+            
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+            
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,6 +137,12 @@ namespace ESCUELA
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRegistroCargo frm = new FrmRegistroCargo();
+            frm.Show();
+        }
+
+        private void cargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoCargos frm = new ESCUELA.FrmListadoCargos();
             frm.Show();
         }
     }

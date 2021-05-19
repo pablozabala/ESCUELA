@@ -647,5 +647,11 @@ namespace ESCUELA.Clases
             }
             return Encontro;
         }
+
+        public string SetFecha(DateTime Fecha)
+        {
+            string sFecha = "'" + Fecha.ToShortDateString() + "'";
+            return sFecha;
+        }
     }
 }
