@@ -41,10 +41,18 @@ namespace ESCUELA.Clases
         
         public DataTable GetCargosaVencer(DateTime FechaDesde,DateTime FechaHasta)
         {
+            cFunciones fun = new Clases.cFunciones();
             string sql = "";
             sql = "select c.CodCargo,c.CodDocente,d.Apellido,d.Nombre"; ;
-            sql = sql + " From Cargo c,Docente d";
+            sql = sql + ",ca.Nombre as Caracter";
+            sql = sql + ",m.Nombre as Materia ";
+            sql = sql + ",c.FechaDesde,c.FechaHasta";
+            sql = sql + " From Cargo c,Docente d,Materia m,Caracter ca";
             sql = sql + " where c.CodDocente=d.IdDocente";
+            sql = sql + " and c.CodMateria = m.CodMateria";
+            sql = sql + " and ca.CodCaracter=c.CodCaracter";
+            sql = sql + " and c.FechaHasta>=" + fun.SetFecha(FechaDesde);
+            sql = sql + " and c.FechaHasta<=" + fun.SetFecha(FechaHasta);
             return cDb.GetDatatable(sql);
         }
         

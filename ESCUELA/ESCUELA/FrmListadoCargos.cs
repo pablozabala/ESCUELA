@@ -34,5 +34,24 @@ namespace ESCUELA
             DataTable trdo = cargo.GetCargosaVencer(FechaDesde, FechaHasta);
             Grilla.DataSource = trdo;
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            cFunciones fun = new cFunciones();
+            if (fun.ValidarFecha (txtFechaDesde.Text)==false)
+            {
+                Mensaje("La fecha desde es incorrecta");
+                return;
+            }
+             
+            if (fun.ValidarFecha(txtFechaHasta.Text) == false)
+            {
+                Mensaje("La fecha Hasta es incorrecta");
+                return;
+            }
+            DateTime FechaDesde = Convert.ToDateTime(txtFechaDesde.Text);
+            DateTime FechaHasta = Convert.ToDateTime(txtFechaHasta.Text);
+            CargarGrilla(FechaDesde, FechaHasta);
+        }
     }
 }
