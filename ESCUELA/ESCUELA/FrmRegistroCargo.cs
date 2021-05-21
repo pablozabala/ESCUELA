@@ -74,6 +74,7 @@ namespace ESCUELA
             try
             {
                 GrabarDocente(con, tran);
+                GrabarDocenteSuplente(con, tran);
                 GrabarCargo(con, tran);
                 tran.Commit();
                 con.Close();
@@ -104,6 +105,23 @@ namespace ESCUELA
             return CodDocente;
         }
 
+        public Int32 GrabarDocenteSuplente(SqlConnection con, SqlTransaction tran)
+        {
+            string Apellido = txtApellidoSuplente.Text;
+            string NroDoc = txtNroDocSuplente.Text;
+            string Nombre = txtNombreSuplente.Text;
+            string Email = txtMailSuplente.Text;
+            string Celular = txtTelefonoSuplente.Text;
+            Int32 CodDocente = 0;
+            cDocente doc = new cDocente();
+            if (txtCodDocenteSuplente.Text == "")
+            {  
+                CodDocente = doc.GrabarDocenteTransaccion(con, tran, NroDoc, Apellido, Nombre, Email, Celular);
+                txtCodDocenteSuplente.Text = CodDocente.ToString();
+            }
+            return CodDocente;
+        }
+
         public void GrabarCargo(SqlConnection con, SqlTransaction tran)
         {
             Int32 CodDocente = 0;
@@ -113,6 +131,7 @@ namespace ESCUELA
             Int32 CodCaracter = 0;
             DateTime FechaDesde = DateTime.Now;
             DateTime FechaHasta = DateTime.Now;
+            Int32 CodDocenteSuplente = 0;
 
             CodDocente = Convert.ToInt32(txtCodDocente.Text);
             CodMateria = Convert.ToInt32(cmbMateria.SelectedValue);
@@ -121,10 +140,11 @@ namespace ESCUELA
             CodCaracter = Convert.ToInt32(cmbCaracter.SelectedValue);
             FechaDesde = Convert.ToDateTime(txtFechaDesde.Text);
             FechaHasta = Convert.ToDateTime(txtFechaHasta.Text);
+            CodDocenteSuplente = Convert.ToInt32(txtCodDocenteSuplente.Text);
 
             cCargo cargo = new cCargo();
             cargo.InsertarCargo(con, tran, CodDocente, CodMateria, Curso, Division,
-                CodCaracter, FechaDesde, FechaHasta);
+                CodCaracter, FechaDesde, FechaHasta, CodDocenteSuplente);
         }
 
         public Boolean Validar()
@@ -230,6 +250,56 @@ namespace ESCUELA
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNroDoc_TextChanged(object sender, EventArgs e)
+        {
+            string NroDoc = txtNroDoc.Text;
+            if (NroDoc.Length > 4)
+            {
+                cDocente doc = new Clases.cDocente();
+                DataTable trdo = doc.GetDocentexDni(NroDoc);
+                if (trdo.Rows.Count > 0)
+                {
+                    txtApellido.Text = trdo.Rows[0]["Apellido"].ToString();
+                    txtNombre.Text = trdo.Rows[0]["Nombre"].ToString();
+                    txtTelefono.Text = trdo.Rows[0]["Celular"].ToString();
+                    txtMail.Text = trdo.Rows[0]["Email"].ToString();
+                }
+                else
+                {
+                    txtMail.Text = "";
+                    txtTelefono.Text = "";
+                    txtApellido.Text = "";
+                    txtNombre.Text = "";
+
+                }
+            }
+        }
+
+        private void txtNroDocSuplente_TextChanged(object sender, EventArgs e)
+        { 
+            string NroDoc = txtNroDocSuplente.Text;
+            if (NroDoc.Length > 4)
+            {        
+                cDocente doc = new Clases.cDocente();
+                DataTable trdo = doc.GetDocentexDni(NroDoc);
+                if (trdo.Rows.Count > 0)
+                {    
+                    txtApellidoSuplente.Text = trdo.Rows[0]["Apellido"].ToString();
+                    txtNombreSuplente.Text = trdo.Rows[0]["Nombre"].ToString();
+                    txtTelefonoSuplente.Text = trdo.Rows[0]["Celular"].ToString();
+                    txtMailSuplente.Text = trdo.Rows[0]["Email"].ToString();
+                }
+                else
+                {
+                    txtTelefonoSuplente.Text = "";
+                    txtMailSuplente.Text = "";
+                    txtApellidoSuplente.Text = "";
+                    txtApellidoSuplente.Text = "";
+
+                }
+            }
         }
     }
 }

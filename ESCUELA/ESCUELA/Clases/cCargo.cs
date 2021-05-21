@@ -11,7 +11,7 @@ namespace ESCUELA.Clases
     public class cCargo
     {
         public void InsertarCargo(SqlConnection con, SqlTransaction tran,
-            Int32 CodDocente,Int32 CodMateria,string Curso,string Division,Int32 CodCaracter,DateTime FechaDesde,DateTime FechaHasta)
+            Int32 CodDocente,Int32 CodMateria,string Curso,string Division,Int32 CodCaracter,DateTime FechaDesde,DateTime FechaHasta, Int32 CodDocenteSuplente)
         {
             cFunciones fun = new cFunciones();
             string sql = "";
@@ -20,6 +20,7 @@ namespace ESCUELA.Clases
             sql = sql + ",CodCaracter";
             sql = sql + ",FechaDesde";
             sql = sql + ",FechaHasta";
+            sql = sql + ",CodDocenteSuplente";
             sql = sql + ")";
             sql = sql + "Values(";
             sql = sql + CodDocente.ToString();
@@ -29,6 +30,7 @@ namespace ESCUELA.Clases
             sql = sql + "," + CodCaracter.ToString();
             sql = sql + "," + fun.SetFecha(FechaDesde);
             sql = sql + "," + fun.SetFecha(FechaHasta);
+            sql = sql + "," + CodDocenteSuplente.ToString();
             sql = sql + ")";
             cDb.GrabarTransaccion(con, tran, sql);
         }
@@ -43,7 +45,9 @@ namespace ESCUELA.Clases
         {
             cFunciones fun = new Clases.cFunciones();
             string sql = "";
-            sql = "select c.CodCargo,c.CodDocente,d.Apellido,d.Nombre"; ;
+            sql = "select c.CodCargo,c.CodDocente,d.Apellido as Titular,d.Nombre"; ;
+            sql = sql + ",(select sup.Apellido from Docente Sup where Sup.IdDocente=c.CodDocenteSuplente) as Suplente";
+            sql = sql + ",(select sup.Nombre from Docente Sup where Sup.IdDocente=c.CodDocenteSuplente) as NombreSuplente";
             sql = sql + ",ca.Nombre as Caracter";
             sql = sql + ",m.Nombre as Materia ";
             sql = sql + ",c.FechaDesde,c.FechaHasta";

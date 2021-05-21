@@ -30,9 +30,12 @@ namespace ESCUELA
 
         private void CargarGrilla(DateTime FechaDesde,DateTime FechaHasta)
         {
+            cFunciones fun = new Clases.cFunciones();
             cCargo cargo = new Clases.cCargo();
             DataTable trdo = cargo.GetCargosaVencer(FechaDesde, FechaHasta);
             Grilla.DataSource = trdo;
+            string Col = "0;0;15;15;15;15;10;10;10;10";
+            fun.AnchoColumnas(Grilla, Col);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -52,6 +55,8 @@ namespace ESCUELA
             DateTime FechaDesde = Convert.ToDateTime(txtFechaDesde.Text);
             DateTime FechaHasta = Convert.ToDateTime(txtFechaHasta.Text);
             CargarGrilla(FechaDesde, FechaHasta);
+            string Col = "0;0;15;10;15;10;10;10;15;15";
+            fun.AnchoColumnas(Grilla, Col);
         }
     }
 }
