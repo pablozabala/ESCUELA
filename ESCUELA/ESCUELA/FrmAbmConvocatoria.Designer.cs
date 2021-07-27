@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmConvocatoria));
             this.Grupo = new System.Windows.Forms.GroupBox();
+            this.cmb_CodCaracter = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMFechaFin = new System.Windows.Forms.MaskedTextBox();
             this.txt_Descripcion = new System.Windows.Forms.TextBox();
@@ -50,6 +52,8 @@
             // 
             // Grupo
             // 
+            this.Grupo.Controls.Add(this.cmb_CodCaracter);
+            this.Grupo.Controls.Add(this.label3);
             this.Grupo.Controls.Add(this.label2);
             this.Grupo.Controls.Add(this.txtMFechaFin);
             this.Grupo.Controls.Add(this.txt_Descripcion);
@@ -58,18 +62,37 @@
             this.Grupo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Grupo.Location = new System.Drawing.Point(12, 55);
             this.Grupo.Name = "Grupo";
-            this.Grupo.Size = new System.Drawing.Size(353, 131);
+            this.Grupo.Size = new System.Drawing.Size(378, 131);
             this.Grupo.TabIndex = 20;
             this.Grupo.TabStop = false;
             this.Grupo.Text = "Convocatoria";
             this.Grupo.Enter += new System.EventHandler(this.Grupo_Enter);
+            // 
+            // cmb_CodCaracter
+            // 
+            this.cmb_CodCaracter.FormattingEnabled = true;
+            this.cmb_CodCaracter.Location = new System.Drawing.Point(109, 80);
+            this.cmb_CodCaracter.Name = "cmb_CodCaracter";
+            this.cmb_CodCaracter.Size = new System.Drawing.Size(226, 24);
+            this.cmb_CodCaracter.TabIndex = 46;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(17, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Finalizada";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(17, 64);
+            this.label2.Location = new System.Drawing.Point(17, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 44;
@@ -78,7 +101,7 @@
             // 
             // txtMFechaFin
             // 
-            this.txtMFechaFin.Location = new System.Drawing.Point(109, 64);
+            this.txtMFechaFin.Location = new System.Drawing.Point(109, 48);
             this.txtMFechaFin.Mask = "00/00/0000";
             this.txtMFechaFin.Name = "txtMFechaFin";
             this.txtMFechaFin.Size = new System.Drawing.Size(66, 23);
@@ -87,7 +110,7 @@
             // 
             // txt_Descripcion
             // 
-            this.txt_Descripcion.Location = new System.Drawing.Point(109, 38);
+            this.txt_Descripcion.Location = new System.Drawing.Point(109, 22);
             this.txt_Descripcion.Multiline = true;
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(226, 20);
@@ -98,7 +121,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(17, 38);
+            this.label1.Location = new System.Drawing.Point(17, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 1;
@@ -106,7 +129,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(235, 105);
+            this.txtCodigo.Location = new System.Drawing.Point(225, 51);
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
@@ -220,7 +243,7 @@
             this.Controls.Add(this.Grupo);
             this.Controls.Add(this.BarraBotones);
             this.Name = "FrmAbmConvocatoria";
-            this.Text = "FrmAbmConvocatoria";
+            this.Text = "Formulario de convocatorias";
             this.Load += new System.EventHandler(this.FrmAbmConvocatoria_Load);
             this.Grupo.ResumeLayout(false);
             this.Grupo.PerformLayout();
@@ -248,5 +271,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtMFechaFin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmb_CodCaracter;
     }
 }

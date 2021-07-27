@@ -126,7 +126,7 @@ namespace ESCUELA
         {
             Principal.OpcionesdeBusqueda = "Apellido";
             Principal.TablaPrincipal = "Docente";
-            Principal.OpcionesColumnasGrilla = "IdDocente;Apellido;Nombre";
+            Principal.OpcionesColumnasGrilla = "CodDocente;Apellido;Nombre";
             Principal.ColumnasVisibles = "0;1;1";
             Principal.ColumnasAncho = "0;390;190";
             FrmBuscadorGenerico form = new FrmBuscadorGenerico();

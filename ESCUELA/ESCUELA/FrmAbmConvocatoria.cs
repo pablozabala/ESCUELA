@@ -23,6 +23,7 @@ namespace ESCUELA
             fun = new Clases.cFunciones();
             Botonera(1);
             Grupo.Enabled = false;
+            fun.LlenarCombo(cmb_CodCaracter, "Caracter", "Nombre", "CodCaracter");
         }
 
         private void Botonera(int Jugada)
@@ -81,7 +82,7 @@ namespace ESCUELA
             }
             Mensaje("Datos grabados correctamente");
             txtCodigo.Text = "";
-           
+            fun.LimpiarGenerico(this);
 
         }
 
