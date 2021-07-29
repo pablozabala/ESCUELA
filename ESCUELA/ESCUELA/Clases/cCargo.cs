@@ -46,13 +46,13 @@ namespace ESCUELA.Clases
             cFunciones fun = new Clases.cFunciones();
             string sql = "";
             sql = "select c.CodCargo,c.CodDocente,d.Apellido as Titular,d.Nombre"; ;
-            sql = sql + ",(select sup.Apellido from Docente Sup where Sup.IdDocente=c.CodDocenteSuplente) as Suplente";
-            sql = sql + ",(select sup.Nombre from Docente Sup where Sup.IdDocente=c.CodDocenteSuplente) as NombreSuplente";
+            sql = sql + ",(select sup.Apellido from Docente Sup where Sup.CodDocente=c.CodDocenteSuplente) as Suplente";
+            sql = sql + ",(select sup.Nombre from Docente Sup where Sup.CodDocente=c.CodDocenteSuplente) as NombreSuplente";
             sql = sql + ",ca.Nombre as Caracter";
             sql = sql + ",m.Nombre as Materia ";
             sql = sql + ",c.FechaDesde,c.FechaHasta";
             sql = sql + " From Cargo c,Docente d,Materia m,Caracter ca";
-            sql = sql + " where c.CodDocente=d.IdDocente";
+            sql = sql + " where c.CodDocente=d.CodDocente";
             sql = sql + " and c.CodMateria = m.CodMateria";
             sql = sql + " and ca.CodCaracter=c.CodCaracter";
             sql = sql + " and c.FechaHasta>=" + fun.SetFecha(FechaDesde);
