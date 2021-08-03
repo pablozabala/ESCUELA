@@ -11,7 +11,7 @@ using ESCUELA.Clases;
 
 namespace ESCUELA
 {
-    public partial class FrmInscripcionConvocatoria : FrmBase
+    public partial class FrmInscripcionConvocatoria : FormBase
     {
         public FrmInscripcionConvocatoria()
         {

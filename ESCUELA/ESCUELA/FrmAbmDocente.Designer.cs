@@ -68,7 +68,7 @@
             this.btnSalir});
             this.BarraBotones.Location = new System.Drawing.Point(0, 0);
             this.BarraBotones.Name = "BarraBotones";
-            this.BarraBotones.Size = new System.Drawing.Size(470, 39);
+            this.BarraBotones.Size = new System.Drawing.Size(467, 39);
             this.BarraBotones.TabIndex = 20;
             this.BarraBotones.Text = "toolStrip1";
             // 
@@ -170,7 +170,7 @@
             this.Grupo.ForeColor = System.Drawing.Color.Black;
             this.Grupo.Location = new System.Drawing.Point(12, 57);
             this.Grupo.Name = "Grupo";
-            this.Grupo.Size = new System.Drawing.Size(446, 228);
+            this.Grupo.Size = new System.Drawing.Size(446, 186);
             this.Grupo.TabIndex = 21;
             this.Grupo.TabStop = false;
             this.Grupo.Text = "Ficha Datos Personales";
@@ -279,12 +279,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 335);
+            this.ClientSize = new System.Drawing.Size(467, 260);
             this.Controls.Add(this.Grupo);
             this.Controls.Add(this.BarraBotones);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmAbmDocente";
-            this.Text = "FrmAbmDocente";
+            this.Text = "Formulario de docenes";
             this.Load += new System.EventHandler(this.FrmAbmDocente_Load);
             this.BarraBotones.ResumeLayout(false);
             this.BarraBotones.PerformLayout();

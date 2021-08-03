@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ESCUELA.Clases;
 namespace ESCUELA
 {
-    public partial class FrmAbmConvocatoria : FrmBase 
+    public partial class FrmAbmConvocatoria : FormBase
     {
         cFunciones fun;
         public FrmAbmConvocatoria()
