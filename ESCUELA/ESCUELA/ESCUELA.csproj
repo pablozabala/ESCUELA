@@ -95,6 +95,12 @@
     <Compile Include="FrmCargarPuntos.Designer.cs">
       <DependentUpon>FrmCargarPuntos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCopia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCopia.Designer.cs">
+      <DependentUpon>FrmCopia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInscripcionConvocatoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <EmbeddedResource Include="FrmCargarPuntos.resx">
       <DependentUpon>FrmCargarPuntos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCopia.resx">
+      <DependentUpon>FrmCopia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInscripcionConvocatoria.resx">
       <DependentUpon>FrmInscripcionConvocatoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconos\Grabar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

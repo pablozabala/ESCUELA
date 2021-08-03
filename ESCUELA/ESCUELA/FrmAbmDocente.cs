@@ -88,7 +88,7 @@ namespace ESCUELA
             {
                 // if (txt_Ruta.Text != "")
                 //   txt_Ruta.Text = txt_Ruta.Text.Replace("\\", "\\\\");
-                fun.ModificarGenerico(this, "Docente", "IdDocente", txtCodDocente.Text);
+                fun.ModificarGenerico(this, "Docente", "CodDocente", txtCodDocente.Text);
 
             }
             Mensaje("Datos grabados correctamente");
@@ -109,7 +109,7 @@ namespace ESCUELA
                     txt_Apellido.Text = trdo.Rows[0]["Apellido"].ToString();
                     txt_Nombre.Text = trdo.Rows[0]["Nombre"].ToString();
                     txt_Email.Text = trdo.Rows[0]["Email"].ToString();
-                    txtCodDocente.Text = trdo.Rows[0]["IdDocente"].ToString();
+                    txtCodDocente.Text = trdo.Rows[0]["CodDocente"].ToString();
                     txt_Celular.Text = trdo.Rows[0]["Celular"].ToString();
                 }
                 else
@@ -142,7 +142,7 @@ namespace ESCUELA
                 Botonera(3);
                 txtCodDocente.Text = Principal.CodigoPrincipalAbm.ToString();
                 cFunciones fun = new Clases.cFunciones();
-                fun.CargarControles(this, "Docente", "IdDocente", txtCodDocente.Text);
+                fun.CargarControles(this, "Docente", "CodDocente", txtCodDocente.Text);
             }
 
         }
@@ -158,6 +158,11 @@ namespace ESCUELA
             Botonera(1);
             fun.LimpiarGenerico(this);
             Grupo.Enabled = false;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

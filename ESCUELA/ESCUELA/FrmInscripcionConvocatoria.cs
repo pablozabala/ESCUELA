@@ -22,8 +22,11 @@ namespace ESCUELA
         {
             cConvocatoria conv = new Clases.cConvocatoria();
             DataTable trdo = conv.GetConvocatoriasVigentes(); 
-            cFunciones.LlenarCombo(CmbConvocatoria, trdo, "Descripcion", "IdConvocatoria");
-            
+          //  cFunciones.LlenarCombo(CmbConvocatoria, trdo, "Descripcion", "IdConvocatoria");
+            cFunciones fun = new cFunciones();
+            fun.LlenarComboDatatable(CmbConvocatoria, trdo, "Descripcion", "IdConvocatoria");
+
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace ESCUELA
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            if (CmbConvocatoria.SelectedIndex <1)
+            {
+                Mensaje("Debe seleccionar una convocatoria");
+                return;
+            }
             if (txtDocente.Text=="")
             {
                 Mensaje("Ingresar docente");
@@ -67,6 +75,11 @@ namespace ESCUELA
 
         private void btnPuntaje_Click(object sender, EventArgs e)
         {
+            if (CmbConvocatoria.SelectedIndex <1)
+            {
+                Mensaje("Debe seleccionar una convocatoria");
+                return;
+            }
             Int32 Codigo = Convert.ToInt32(CmbConvocatoria.SelectedValue);
             Principal.Codigo = Codigo;
             FrmCargarPuntos frm = new FrmCargarPuntos();
@@ -81,6 +94,19 @@ namespace ESCUELA
         private void CmbConvocatoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtIdConvocatoria.Text = CmbConvocatoria.SelectedValue.ToString();
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            if (CmbConvocatoria.SelectedIndex <1)
+            {
+                Mensaje("Debe seleccionar una convocatoria");
+                return;
+            }
+            Int32 CodConvocatoria = Convert.ToInt32(CmbConvocatoria.SelectedValue);
+            cConvocatoria conv = new cConvocatoria();
+            conv.FinaliarConvocatoria(CodConvocatoria);
+            Mensaje("Datos grabados correctamente");
         }
     }
 }

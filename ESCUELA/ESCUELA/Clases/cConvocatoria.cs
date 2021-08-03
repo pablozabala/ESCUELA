@@ -50,5 +50,13 @@ namespace ESCUELA.Clases
             sql = sql + " and IdConvocatoria=" + IdConvocatoria.ToString();
             cDb.Grabar(sql);
         }
+
+        public void FinaliarConvocatoria(Int32 IdConvocatoria)
+        {
+            string sql = "";
+            sql = "update convocatoria set FechaFin=" + "'" + DateTime.Now.ToShortDateString() + "'";
+            sql = sql + " where IdConvocatoria=" + IdConvocatoria.ToString();
+            cDb.Grabar(sql);
+        }
     }
 }

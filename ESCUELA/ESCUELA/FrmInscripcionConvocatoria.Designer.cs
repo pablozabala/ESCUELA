@@ -39,11 +39,13 @@
             this.CmbConvocatoria = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnFinalizar);
             this.groupBox1.Controls.Add(this.txtIdConvocatoria);
             this.groupBox1.Controls.Add(this.btnPuntaje);
             this.groupBox1.Controls.Add(this.btnGrabar);
@@ -72,7 +74,7 @@
             // 
             // btnPuntaje
             // 
-            this.btnPuntaje.Location = new System.Drawing.Point(233, 125);
+            this.btnPuntaje.Location = new System.Drawing.Point(244, 125);
             this.btnPuntaje.Name = "btnPuntaje";
             this.btnPuntaje.Size = new System.Drawing.Size(109, 31);
             this.btnPuntaje.TabIndex = 7;
@@ -84,9 +86,9 @@
             // 
             this.btnGrabar.BackColor = System.Drawing.Color.White;
             this.btnGrabar.ForeColor = System.Drawing.Color.Black;
-            this.btnGrabar.Location = new System.Drawing.Point(134, 125);
+            this.btnGrabar.Location = new System.Drawing.Point(128, 125);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 31);
+            this.btnGrabar.Size = new System.Drawing.Size(109, 31);
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
@@ -154,6 +156,16 @@
             this.textBox1.Size = new System.Drawing.Size(8, 23);
             this.textBox1.TabIndex = 1;
             // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Location = new System.Drawing.Point(358, 125);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(109, 31);
+            this.btnFinalizar.TabIndex = 9;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
             // FrmInscripcionConvocatoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -163,7 +175,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmInscripcionConvocatoria";
-            this.Text = "FrmInscripcionConvocatoria";
+            this.Text = "Listado de convocatorias vigentes";
             this.Load += new System.EventHandler(this.FrmInscripcionConvocatoria_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -185,5 +197,6 @@
         private System.Windows.Forms.TextBox txtDocente;
         private System.Windows.Forms.Button btnPuntaje;
         private System.Windows.Forms.TextBox txtIdConvocatoria;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }

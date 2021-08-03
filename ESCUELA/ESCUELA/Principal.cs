@@ -145,5 +145,17 @@ namespace ESCUELA
             FrmListadoCargos frm = new ESCUELA.FrmListadoCargos();
             frm.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FrmCopia frm = new ESCUELA.FrmCopia();
+            frm.Show();
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            FrmCopia frm = new ESCUELA.FrmCopia();
+            frm.Show();
+        }
     }
 }
