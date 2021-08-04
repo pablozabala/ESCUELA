@@ -106,7 +106,8 @@ namespace ESCUELA
                 Botonera(3);
                 txtCodigo.Text = Principal.CodigoPrincipalAbm.ToString();
                 cFunciones fun = new Clases.cFunciones();
-                fun.CargarControles(this, "Convocatoria", "IdConvocatoria", txtCodigo.Text);                
+                fun.CargarControles(this, "Convocatoria", "IdConvocatoria", txtCodigo.Text);
+                Grupo.Enabled = false;
             }
 
         }

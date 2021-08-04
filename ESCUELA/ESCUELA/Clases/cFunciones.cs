@@ -361,7 +361,7 @@ namespace ESCUELA.Clases
                                 if (Combo.SelectedIndex > 0)
                                     values = "Values(" + Combo.SelectedValue.ToString();
                                 else
-                                    values = "(null";
+                                    values = " Values(null";
                                 ban = 1;
                             }
                             else
@@ -373,7 +373,29 @@ namespace ESCUELA.Clases
                                     values = values + ",null";
                             }
 
+                        }
 
+                        if (nombre.Substring(0, 4) == "chk_")
+                        {
+                            CheckBox check = (CheckBox)g;
+                            string[] vec = nombre.Split('_');
+                            if (ban == 0)
+                            {
+                                sql = sql + vec[1].ToString();
+                                if (check.Checked == true)
+                                    values = "Values(1";
+                                else
+                                    values = " Values(0";
+                                ban = 1;
+                            }
+                            else
+                            {
+                                sql = sql + "," + vec[1].ToString();
+                                if (check.Checked == true)
+                                    values = values + ",1";
+                                else
+                                    values = values + ",0";
+                            }
                         }
                     }
                 }
@@ -451,6 +473,24 @@ namespace ESCUELA.Clases
                                 sql = sql + "," + vec[1].ToString() + "=" + Combo.SelectedValue.ToString();
                             else
                                 sql = sql + "," + vec[1].ToString() + "=null";
+                            ban = 1;
+                        }
+
+                        if (nombre.Substring(0, 4) == "chk_")
+                        {
+                            CheckBox check = (CheckBox)g;
+                            string[] vec = nombre.Split('_');
+                            if (ban == 0)
+                                if (check.Checked ==true)
+                                    sql = sql + vec[1].ToString() + "=1";
+                                else
+                                    sql = sql + vec[1].ToString() + "=0";
+
+                            else
+                              if (check.Checked == true)
+                                sql = sql + "," + vec[1].ToString() + "=1";
+                            else
+                                sql = sql + "," + vec[1].ToString() + "=0";
                             ban = 1;
                         }
                     }

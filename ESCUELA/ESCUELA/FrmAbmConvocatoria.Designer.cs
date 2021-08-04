@@ -44,12 +44,14 @@
             this.btnAbrir = new System.Windows.Forms.ToolStripButton();
             this.btnIGregarColor = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
+            this.chk_Finalizada = new System.Windows.Forms.CheckBox();
             this.Grupo.SuspendLayout();
             this.BarraBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // Grupo
             // 
+            this.Grupo.Controls.Add(this.chk_Finalizada);
             this.Grupo.Controls.Add(this.cmb_CodCaracter);
             this.Grupo.Controls.Add(this.label3);
             this.Grupo.Controls.Add(this.txt_Descripcion);
@@ -210,6 +212,16 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // chk_Finalizada
+            // 
+            this.chk_Finalizada.AutoSize = true;
+            this.chk_Finalizada.Location = new System.Drawing.Point(109, 84);
+            this.chk_Finalizada.Name = "chk_Finalizada";
+            this.chk_Finalizada.Size = new System.Drawing.Size(91, 21);
+            this.chk_Finalizada.TabIndex = 47;
+            this.chk_Finalizada.Text = "Finalizada";
+            this.chk_Finalizada.UseVisualStyleBackColor = true;
+            // 
             // FrmAbmConvocatoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -246,5 +258,6 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmb_CodCaracter;
+        private System.Windows.Forms.CheckBox chk_Finalizada;
     }
 }
