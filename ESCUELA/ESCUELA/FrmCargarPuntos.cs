@@ -77,6 +77,8 @@ namespace ESCUELA
             con.CargarPuntaje(Puntaje, Categoria, dni, IdConvocatoria);
             Buscar(Principal.Codigo);
             Mensaje("Datos grabados correctamente");
+            txtDni.Text = "";
+            txtDocente.Text = "";
         }
 
         private void label3_Click(object sender, EventArgs e)
