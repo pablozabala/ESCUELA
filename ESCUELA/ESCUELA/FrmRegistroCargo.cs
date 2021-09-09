@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ESCUELA.Clases;
 using System.Data.SqlClient;
+
 namespace ESCUELA
 {
     public partial class FrmRegistroCargo : FormBase

@@ -18,7 +18,7 @@ namespace ESCUELA
             Application.SetCompatibleTextRenderingDefault(false);
           //    Application.Run(new FrmInscripcionConvocatoria());
               Application.Run(new Principal());
-         //   Application.Run(new FrmAbmConvocatoria());
+         //   Application.Run(new FrmPrueba() );
         }
     }
 }

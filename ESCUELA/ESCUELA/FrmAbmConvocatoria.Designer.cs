@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmConvocatoria));
             this.Grupo = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.chk_Finalizada = new System.Windows.Forms.CheckBox();
             this.cmb_CodCaracter = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Descripcion = new System.Windows.Forms.TextBox();
@@ -44,13 +46,13 @@
             this.btnAbrir = new System.Windows.Forms.ToolStripButton();
             this.btnIGregarColor = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
-            this.chk_Finalizada = new System.Windows.Forms.CheckBox();
             this.Grupo.SuspendLayout();
             this.BarraBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // Grupo
             // 
+            this.Grupo.Controls.Add(this.label2);
             this.Grupo.Controls.Add(this.chk_Finalizada);
             this.Grupo.Controls.Add(this.cmb_CodCaracter);
             this.Grupo.Controls.Add(this.label3);
@@ -65,6 +67,25 @@
             this.Grupo.TabStop = false;
             this.Grupo.Text = "Convocatoria";
             this.Grupo.Enter += new System.EventHandler(this.Grupo_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(17, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Finalizada";
+            // 
+            // chk_Finalizada
+            // 
+            this.chk_Finalizada.AutoSize = true;
+            this.chk_Finalizada.Location = new System.Drawing.Point(109, 84);
+            this.chk_Finalizada.Name = "chk_Finalizada";
+            this.chk_Finalizada.Size = new System.Drawing.Size(15, 14);
+            this.chk_Finalizada.TabIndex = 47;
+            this.chk_Finalizada.UseVisualStyleBackColor = true;
             // 
             // cmb_CodCaracter
             // 
@@ -81,9 +102,10 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(17, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 45;
-            this.label3.Text = "Finalizada";
+            this.label3.Text = "Caracter";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txt_Descripcion
             // 
@@ -105,7 +127,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(176, 111);
+            this.txtCodigo.Location = new System.Drawing.Point(179, 95);
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
@@ -212,16 +234,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // chk_Finalizada
-            // 
-            this.chk_Finalizada.AutoSize = true;
-            this.chk_Finalizada.Location = new System.Drawing.Point(109, 84);
-            this.chk_Finalizada.Name = "chk_Finalizada";
-            this.chk_Finalizada.Size = new System.Drawing.Size(91, 21);
-            this.chk_Finalizada.TabIndex = 47;
-            this.chk_Finalizada.Text = "Finalizada";
-            this.chk_Finalizada.UseVisualStyleBackColor = true;
-            // 
             // FrmAbmConvocatoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,5 +271,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmb_CodCaracter;
         private System.Windows.Forms.CheckBox chk_Finalizada;
+        private System.Windows.Forms.Label label2;
     }
 }
