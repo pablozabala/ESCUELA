@@ -51,6 +51,7 @@
             this.printPreviewToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BTNdOCENTES = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -165,6 +166,7 @@
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
+            this.BTNdOCENTES,
             this.openToolStripButton,
             this.saveToolStripButton,
             this.toolStripSeparator1,
@@ -246,6 +248,16 @@
             this.helpToolStripButton.Size = new System.Drawing.Size(36, 36);
             this.helpToolStripButton.Text = "Ayuda";
             // 
+            // BTNdOCENTES
+            // 
+            this.BTNdOCENTES.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BTNdOCENTES.Image = ((System.Drawing.Image)(resources.GetObject("BTNdOCENTES.Image")));
+            this.BTNdOCENTES.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BTNdOCENTES.Name = "BTNdOCENTES";
+            this.BTNdOCENTES.Size = new System.Drawing.Size(36, 36);
+            this.BTNdOCENTES.Text = "toolStripButton1";
+            this.BTNdOCENTES.Click += new System.EventHandler(this.BTNdOCENTES_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -313,6 +325,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem docenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton BTNdOCENTES;
     }
 }
 

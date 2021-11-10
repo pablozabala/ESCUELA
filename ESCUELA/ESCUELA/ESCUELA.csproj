@@ -210,7 +210,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Iconos\add.ico" />
+    <Content Include="Iconos\cancel.ico" />
+    <Content Include="Iconos\clie2.ico" />
     <Content Include="Iconos\Grabar.png" />
+    <Content Include="Iconos\Reloj.ico" />
+    <Content Include="Iconos\statistics2.ico" />
+    <Content Include="Iconos\zoom.ico" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

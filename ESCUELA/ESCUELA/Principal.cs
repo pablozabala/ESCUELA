@@ -157,5 +157,11 @@ namespace ESCUELA
             FrmCopia frm = new ESCUELA.FrmCopia();
             frm.Show();
         }
+
+        private void BTNdOCENTES_Click(object sender, EventArgs e)
+        {
+            FrmAbmDocente frm = new FrmAbmDocente();
+            frm.Show();
+        }
     }
 }

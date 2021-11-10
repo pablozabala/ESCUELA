@@ -124,11 +124,11 @@ namespace ESCUELA
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            Principal.OpcionesdeBusqueda = "Apellido";
+            Principal.OpcionesdeBusqueda = "Apellido;Nombre;NroDoc";
             Principal.TablaPrincipal = "Docente";
-            Principal.OpcionesColumnasGrilla = "CodDocente;Apellido;Nombre";
-            Principal.ColumnasVisibles = "0;1;1";
-            Principal.ColumnasAncho = "0;390;190";
+            Principal.OpcionesColumnasGrilla = "CodDocente;NroDoc;Apellido;Nombre";
+            Principal.ColumnasVisibles = "0;1;1;1";
+            Principal.ColumnasAncho = "0;100;240;240";
             FrmBuscadorGenerico form = new FrmBuscadorGenerico();
             form.FormClosing += new FormClosingEventHandler(form_FormClosing);
             form.ShowDialog();
