@@ -25,6 +25,7 @@ namespace ESCUELA
             Grilla.DataSource = tb;
             txtCantidad.Text = tb.Rows.Count.ToString();
             Grilla.Columns[0].Visible = false;
+            Grilla.Columns[4].HeaderText = "Pos"; 
             Grilla.Columns[1].Width = 260;
 
         }
@@ -32,6 +33,13 @@ namespace ESCUELA
         private void FrmCargarPuntos_Load(object sender, EventArgs e)
         {
             Buscar(Principal.Codigo);
+            CargarCategoria();
+        }
+
+        private void CargarCategoria()
+        {            
+            cFunciones fun = new cFunciones();
+            fun.LlenarCombo(CmbCategoriaDocente, "CatDocente","Nombre", "CodCatDocente");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -72,9 +80,15 @@ namespace ESCUELA
             Double Puntaje = Convert.ToDouble(txtPuntaje.Text);
             Int32 Categoria = Convert.ToInt32(txtCategoria.Text);
             Int32 IdConvocatoria = Convert.ToInt32(Principal.Codigo);
+            string PuntajeLetra = "";
+            PuntajeLetra = Puntaje.ToString();
+            if (CmbCategoriaDocente.SelectedIndex >0)
+            {
+                PuntajeLetra = PuntajeLetra + " " + CmbCategoriaDocente.Text;
+            }
             string dni = txtDni.Text;
             cConvocatoria con = new cConvocatoria();
-            con.CargarPuntaje(Puntaje, Categoria, dni, IdConvocatoria);
+            con.CargarPuntaje(Puntaje, Categoria, dni, IdConvocatoria, PuntajeLetra);
             Buscar(Principal.Codigo);
             Mensaje("Datos grabados correctamente");
             txtDni.Text = "";

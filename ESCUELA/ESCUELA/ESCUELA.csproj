@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\cCargo.cs" />
+    <Compile Include="Clases\cCatDocente.cs" />
     <Compile Include="Clases\cConexion.cs" />
     <Compile Include="Clases\cConvocatoria.cs" />
     <Compile Include="Clases\cDb.cs" />

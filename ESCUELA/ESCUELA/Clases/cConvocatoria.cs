@@ -40,12 +40,13 @@ namespace ESCUELA.Clases
             return cDb.GetDatatable(sql);
         }
 
-        public void CargarPuntaje(Double Puntaje,int Categoria,string dni,Int32 IdConvocatoria)
+        public void CargarPuntaje(Double Puntaje,int Categoria,string dni,Int32 IdConvocatoria,string PuntajeLetra)
         {
             string sql = "";
             sql = "update ConvocatoriaxDocente";
             sql = sql + " set Puntaje=" + Puntaje.ToString().Replace(",", ".");
             sql = sql + ", Categoria=" + Categoria.ToString();
+            sql = sql + ",PuntajeLetra=" + "'" + PuntajeLetra + "'";
             sql = sql + " where Dni=" + "'" + dni + "'";
             sql = sql + " and IdConvocatoria=" + IdConvocatoria.ToString();
             cDb.Grabar(sql);

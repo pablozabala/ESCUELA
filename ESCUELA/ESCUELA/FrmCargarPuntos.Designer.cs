@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CmbCategoriaDocente = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.txtDocente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Grilla = new System.Windows.Forms.DataGridView();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +52,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Black;
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.CmbCategoriaDocente);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnOrdenar);
             this.groupBox1.Controls.Add(this.txtCantidad);
@@ -71,6 +76,15 @@
             this.groupBox1.Text = "Listado de inscriptos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // CmbCategoriaDocente
+            // 
+            this.CmbCategoriaDocente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbCategoriaDocente.FormattingEnabled = true;
+            this.CmbCategoriaDocente.Location = new System.Drawing.Point(347, 19);
+            this.CmbCategoriaDocente.Name = "CmbCategoriaDocente";
+            this.CmbCategoriaDocente.Size = new System.Drawing.Size(121, 28);
+            this.CmbCategoriaDocente.TabIndex = 13;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -84,7 +98,7 @@
             // 
             // btnOrdenar
             // 
-            this.btnOrdenar.Location = new System.Drawing.Point(426, 19);
+            this.btnOrdenar.Location = new System.Drawing.Point(574, 15);
             this.btnOrdenar.Name = "btnOrdenar";
             this.btnOrdenar.Size = new System.Drawing.Size(75, 23);
             this.btnOrdenar.TabIndex = 11;
@@ -194,6 +208,16 @@
             this.Grilla.TabIndex = 0;
             this.Grilla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grilla_CellClick);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(305, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Cat";
+            // 
             // FrmCargarPuntos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,5 +251,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOrdenar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox CmbCategoriaDocente;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label label6;
     }
 }
