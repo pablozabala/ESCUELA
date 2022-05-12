@@ -98,6 +98,16 @@ namespace ESCUELA
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+            string msj = "Confirma Eliminar eliminar";
+            var result = MessageBox.Show(msj, "Información",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);
+
+            // If the no button was pressed ...
+            if (result == DialogResult.No)
+            {
+                return;
+            }
             if (CmbConvocatoria.SelectedIndex <1)
             {
                 Mensaje("Debe seleccionar una convocatoria");
