@@ -24,6 +24,14 @@ namespace ESCUELA.Clases
             cDb.Grabar(sql);
         }
 
+        public void BorrarDocentexConvocatoria(int IdConvocatoria,string dni)
+        {
+            string sql = "delete from ConvocatoriaxDocente ";
+            sql = sql + " where IdConvocatoria=" + IdConvocatoria.ToString();
+            sql = sql + " and Dni=" + "'" + dni + "'";
+            cDb.Grabar(sql);
+        }
+
 
         public DataTable GetConvocatoriaDocentexId(Int32 Convocatoria)
         {

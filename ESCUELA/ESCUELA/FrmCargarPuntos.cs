@@ -24,9 +24,12 @@ namespace ESCUELA
             DataTable tb = con.GetConvocatoriaDocentexId(IdConvocatoria);
             Grilla.DataSource = tb;
             txtCantidad.Text = tb.Rows.Count.ToString();
-            Grilla.Columns[0].Visible = false;
+           // Grilla.Columns[0].Visible = false;
             Grilla.Columns[4].HeaderText = "Pos"; 
-            Grilla.Columns[1].Width = 260;
+           // Grilla.Columns[1].Width = 260;
+            cFunciones fun = new Clases.cFunciones();
+            string col = "0;40;15;15;15;15";
+            fun.AnchoColumnas(Grilla, col);
 
         }
 
@@ -116,6 +119,20 @@ namespace ESCUELA
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (Grilla.CurrentRow ==null)
+            {
+                MessageBox.Show("Debe seleccionar un elemento");
+                return;
+            }
+            string Dni = Grilla.CurrentRow.Cells[2].Value.ToString();
+            int IdConvocatoria = Principal.Codigo;
+            cConvocatoria conv = new cConvocatoria();
+            conv.BorrarDocentexConvocatoria(IdConvocatoria, Dni);
+            Buscar(Principal.Codigo);
         }
     }
 }
