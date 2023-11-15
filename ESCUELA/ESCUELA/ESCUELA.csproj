@@ -57,6 +57,7 @@
     <Compile Include="Clases\cConvocatoria.cs" />
     <Compile Include="Clases\cDb.cs" />
     <Compile Include="Clases\cDocente.cs" />
+    <Compile Include="Clases\cFalta.cs" />
     <Compile Include="Clases\cFunciones.cs" />
     <Compile Include="cMateria.cs" />
     <Compile Include="FormBase.cs">
@@ -131,6 +132,12 @@
     <Compile Include="FrmRegistrarAsistencia.Designer.cs">
       <DependentUpon>FrmRegistrarAsistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistrarFaltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarFaltas.Designer.cs">
+      <DependentUpon>FrmRegistrarFaltas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistroCargo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarAsistencia.resx">
       <DependentUpon>FrmRegistrarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarFaltas.resx">
+      <DependentUpon>FrmRegistrarFaltas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistroCargo.resx">
       <DependentUpon>FrmRegistroCargo.cs</DependentUpon>

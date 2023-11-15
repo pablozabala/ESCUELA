@@ -13,12 +13,12 @@ namespace ESCUELA
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {    
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
           //    Application.Run(new FrmInscripcionConvocatoria());
-              Application.Run(new Principal());
-         //   Application.Run(new FrmPrueba() );
+         //     Application.Run(new Principal());
+           Application.Run(new FrmRegistrarFaltas() );
         }
     }
 }

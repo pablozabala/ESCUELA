@@ -163,5 +163,11 @@ namespace ESCUELA
             FrmAbmDocente frm = new FrmAbmDocente();
             frm.Show();
         }
+
+        private void menuRegistrarFaltas_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarFaltas frm = new FrmRegistrarFaltas();
+            frm.Show();
+        }
     }
 }
