@@ -96,6 +96,12 @@
     <Compile Include="FrmBuscadorGenerico.Designer.cs">
       <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBuscarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarDocente.Designer.cs">
+      <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCargarPuntos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscadorGenerico.resx">
       <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarDocente.resx">
+      <DependentUpon>FrmBuscarDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCargarPuntos.resx">
       <DependentUpon>FrmCargarPuntos.cs</DependentUpon>

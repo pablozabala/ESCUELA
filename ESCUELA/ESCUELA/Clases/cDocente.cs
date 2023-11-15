@@ -35,5 +35,37 @@ namespace ESCUELA.Clases
             string t1 = "'" + t + "'";
             return t1;
         }
+
+        public DataTable GetDocente(string Apellido, string Nombre)
+        {
+            string sql = "";
+            sql = " select CodDocente,Apellido, Nombre  ";
+            sql = sql + " from Docente ";
+            if (Apellido !="")
+            {
+                sql = sql + " where Apellido like " + "'%" + Apellido + "%'"; 
+            }
+
+            if (Nombre !="")
+            {
+                if (Apellido !="")
+                {
+                    sql = sql + " and Nombre like " + "'%" + Nombre + "%'";
+                }
+                else
+                {
+                    sql = sql + " where Nombre like " + "'%" + Nombre + "%'";
+                }
+            }
+
+            return cDb.GetDatatable(sql);
+        }
+
+        public DataTable GetDoocentexCodigo(int CodDocente)
+        {
+            string sql = "select * from Docente ";
+            sql = sql + " where CodDocente=" + CodDocente.ToString();
+            return cDb.GetDatatable(sql);
+        }
     }
 }

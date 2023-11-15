@@ -14,7 +14,8 @@ namespace ESCUELA
     {
         private int childFormNumber = 0;
         public static Int32 Codigo;
-        
+        public static Int32? CodDocente;
+
         //nombre del campo id
         public static string CampoIdSecundario;
         //nombre del campo descripcion
