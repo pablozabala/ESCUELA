@@ -33,6 +33,8 @@ namespace ESCUELA
             trdo = fun.AgregarFilas(trdo, Val);
             Val = "2;Carpeta Médica ";
             trdo = fun.AgregarFilas(trdo, Val);
+            Val = "3;Carpeta Médica x 3";
+            trdo = fun.AgregarFilas(trdo, Val);
             cmbMotivo.DataSource = trdo;
             cmbMotivo.ValueMember = "Codigo";
             cmbMotivo.DisplayMember = "Tipo";
@@ -54,23 +56,33 @@ namespace ESCUELA
             int CodDocente = Convert.ToInt32(txtCodDocente.Text);
             DateTime Fecha = dpFecha.Value;
             MessageBox.Show(Fecha.ToShortDateString());
-            int aa = 0, cm = 0;
+            int aa = 0, cm = 0, c3 = 0;
             int COdMotivo = Convert.ToInt32(cmbMotivo.SelectedValue);
             switch(COdMotivo)
             {
                 case 1:
                     aa = 1;
                     cm = 0;
+                    c3 = 0;
                     break;
                 case 2:
                     aa = 0;
                     cm = 1;
+                    c3 = 0;
+                    break;
+                case 3:
+                    aa = 0;
+                    cm = 0;
+                    c3 = 1;
                     break;
             }
 
             cFalta falta = new cFalta();
-            falta.Insertar(CodDocente, Fecha, aa, cm);
+            falta.Insertar(CodDocente, Fecha, aa, cm,c3);
             MessageBox.Show("Datos grabados correctamente");
+            txtCodDocente.Text = "";
+            txtApellido.Text = "";
+            txtNombre.Text = "";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

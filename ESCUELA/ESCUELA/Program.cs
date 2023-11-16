@@ -17,8 +17,8 @@ namespace ESCUELA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
              //   Application.Run(new FrmBuscarDocente());
-            //     Application.Run(new Principal());
-            Application.Run(new FrmRegistrarFaltas() );
+                 Application.Run(new Principal());
+          //  Application.Run(new FrmRegistrarFaltas() );
         }
     }
 }
