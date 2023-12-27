@@ -108,6 +108,12 @@
     <Compile Include="FrmCargarPuntos.Designer.cs">
       <DependentUpon>FrmCargarPuntos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaFalta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaFalta.Designer.cs">
+      <DependentUpon>FrmConsultaFalta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCopia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     </Compile>
     <Compile Include="FrmListadoCargos.Designer.cs">
       <DependentUpon>FrmListadoCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoDocente.Designer.cs">
+      <DependentUpon>FrmListadoDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrueba.cs">
       <SubType>Form</SubType>
@@ -183,6 +195,9 @@
     <EmbeddedResource Include="FrmCargarPuntos.resx">
       <DependentUpon>FrmCargarPuntos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaFalta.resx">
+      <DependentUpon>FrmConsultaFalta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCopia.resx">
       <DependentUpon>FrmCopia.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoCargos.resx">
       <DependentUpon>FrmListadoCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoDocente.resx">
+      <DependentUpon>FrmListadoDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>

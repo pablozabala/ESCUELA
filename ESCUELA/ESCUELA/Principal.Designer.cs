@@ -42,6 +42,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRegistrarFaltas = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.BTNdOCENTES = new System.Windows.Forms.ToolStripButton();
@@ -55,8 +57,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuRegistrarFaltas = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -162,9 +163,25 @@
             // cargosToolStripMenuItem
             // 
             this.cargosToolStripMenuItem.Name = "cargosToolStripMenuItem";
-            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
             this.cargosToolStripMenuItem.Text = "Cargos";
             this.cargosToolStripMenuItem.Click += new System.EventHandler(this.cargosToolStripMenuItem_Click);
+            // 
+            // faltasToolStripMenuItem
+            // 
+            this.faltasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuRegistrarFaltas,
+            this.consultasrToolStripMenuItem});
+            this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
+            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.faltasToolStripMenuItem.Text = "Faltas";
+            // 
+            // menuRegistrarFaltas
+            // 
+            this.menuRegistrarFaltas.Name = "menuRegistrarFaltas";
+            this.menuRegistrarFaltas.Size = new System.Drawing.Size(181, 26);
+            this.menuRegistrarFaltas.Text = "Registar Faltas";
+            this.menuRegistrarFaltas.Click += new System.EventHandler(this.menuRegistrarFaltas_Click);
             // 
             // toolStrip
             // 
@@ -281,20 +298,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(52, 18);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // faltasToolStripMenuItem
+            // consultasrToolStripMenuItem
             // 
-            this.faltasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuRegistrarFaltas});
-            this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
-            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.faltasToolStripMenuItem.Text = "Faltas";
-            // 
-            // menuRegistrarFaltas
-            // 
-            this.menuRegistrarFaltas.Name = "menuRegistrarFaltas";
-            this.menuRegistrarFaltas.Size = new System.Drawing.Size(181, 26);
-            this.menuRegistrarFaltas.Text = "Registar Faltas";
-            this.menuRegistrarFaltas.Click += new System.EventHandler(this.menuRegistrarFaltas_Click);
+            this.consultasrToolStripMenuItem.Name = "consultasrToolStripMenuItem";
+            this.consultasrToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.consultasrToolStripMenuItem.Text = "Consultasr";
+            this.consultasrToolStripMenuItem.Click += new System.EventHandler(this.consultasrToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -306,7 +315,7 @@
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -351,6 +360,7 @@
         private System.Windows.Forms.ToolStripButton BTNdOCENTES;
         private System.Windows.Forms.ToolStripMenuItem faltasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuRegistrarFaltas;
+        private System.Windows.Forms.ToolStripMenuItem consultasrToolStripMenuItem;
     }
 }
 

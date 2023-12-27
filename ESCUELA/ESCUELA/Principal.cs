@@ -15,7 +15,7 @@ namespace ESCUELA
         private int childFormNumber = 0;
         public static Int32 Codigo;
         public static Int32? CodDocente;
-
+        
         //nombre del campo id
         public static string CampoIdSecundario;
         //nombre del campo descripcion
@@ -121,6 +121,7 @@ namespace ESCUELA
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            
 
         }
 
@@ -168,6 +169,12 @@ namespace ESCUELA
         private void menuRegistrarFaltas_Click(object sender, EventArgs e)
         {
             FrmRegistrarFaltas frm = new FrmRegistrarFaltas();
+            frm.Show();
+        }
+
+        private void consultasrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaFalta frm = new FrmConsultaFalta();
             frm.Show();
         }
     }

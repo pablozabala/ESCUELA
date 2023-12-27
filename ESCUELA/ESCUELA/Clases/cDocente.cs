@@ -67,5 +67,15 @@ namespace ESCUELA.Clases
             sql = sql + " where CodDocente=" + CodDocente.ToString();
             return cDb.GetDatatable(sql);
         }
+
+        public DataTable GetDocentes(string Apellido, string Nombre)
+        {
+            string sql = "";
+            sql = "select d.coddocente, d.Apellido, d.Nombre ";
+            sql = sql + " from docente d ";
+            if (Apellido != "")
+                sql = sql + " where Apellido like " + "'%" + Apellido + "%'";
+            return cDb.GetDatatable(sql);
+        }
     }
 }
