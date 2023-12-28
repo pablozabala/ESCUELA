@@ -44,6 +44,7 @@
             this.cargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRegistrarFaltas = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.BTNdOCENTES = new System.Windows.Forms.ToolStripButton();
@@ -57,7 +58,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.consultasrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faltasDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -171,7 +172,8 @@
             // 
             this.faltasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuRegistrarFaltas,
-            this.consultasrToolStripMenuItem});
+            this.consultasrToolStripMenuItem,
+            this.faltasDiariasToolStripMenuItem});
             this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
             this.faltasToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.faltasToolStripMenuItem.Text = "Faltas";
@@ -182,6 +184,13 @@
             this.menuRegistrarFaltas.Size = new System.Drawing.Size(181, 26);
             this.menuRegistrarFaltas.Text = "Registar Faltas";
             this.menuRegistrarFaltas.Click += new System.EventHandler(this.menuRegistrarFaltas_Click);
+            // 
+            // consultasrToolStripMenuItem
+            // 
+            this.consultasrToolStripMenuItem.Name = "consultasrToolStripMenuItem";
+            this.consultasrToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.consultasrToolStripMenuItem.Text = "Consultasr";
+            this.consultasrToolStripMenuItem.Click += new System.EventHandler(this.consultasrToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
@@ -298,12 +307,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(52, 18);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // consultasrToolStripMenuItem
+            // faltasDiariasToolStripMenuItem
             // 
-            this.consultasrToolStripMenuItem.Name = "consultasrToolStripMenuItem";
-            this.consultasrToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.consultasrToolStripMenuItem.Text = "Consultasr";
-            this.consultasrToolStripMenuItem.Click += new System.EventHandler(this.consultasrToolStripMenuItem_Click);
+            this.faltasDiariasToolStripMenuItem.Name = "faltasDiariasToolStripMenuItem";
+            this.faltasDiariasToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.faltasDiariasToolStripMenuItem.Text = "Faltas Diarias";
+            this.faltasDiariasToolStripMenuItem.Click += new System.EventHandler(this.faltasDiariasToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -361,6 +370,7 @@
         private System.Windows.Forms.ToolStripMenuItem faltasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuRegistrarFaltas;
         private System.Windows.Forms.ToolStripMenuItem consultasrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem faltasDiariasToolStripMenuItem;
     }
 }
 

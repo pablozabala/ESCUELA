@@ -177,5 +177,11 @@ namespace ESCUELA
             FrmConsultaFalta frm = new FrmConsultaFalta();
             frm.Show();
         }
+
+        private void faltasDiariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoDiarioFalta frm = new FrmListadoDiarioFalta();
+            frm.Show();
+        }
     }
 }

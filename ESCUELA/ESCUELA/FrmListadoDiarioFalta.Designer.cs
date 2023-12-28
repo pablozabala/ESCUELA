@@ -1,6 +1,6 @@
 ﻿namespace ESCUELA
 {
-    partial class FrmConsultaFalta
+    partial class FrmListadoDiarioFalta
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAnular = new System.Windows.Forms.Button();
             this.Grilla = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,17 +42,28 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAnular);
             this.groupBox1.Controls.Add(this.Grilla);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dpFechaHasta);
             this.groupBox1.Controls.Add(this.dpFechaDesde);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(5, -1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 472);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(809, 472);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btnAnular
+            // 
+            this.btnAnular.Location = new System.Drawing.Point(645, 18);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(75, 34);
+            this.btnAnular.TabIndex = 6;
+            this.btnAnular.Text = "Anular";
+            this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // Grilla
             // 
@@ -59,7 +71,7 @@
             this.Grilla.Location = new System.Drawing.Point(20, 57);
             this.Grilla.Name = "Grilla";
             this.Grilla.RowTemplate.Height = 24;
-            this.Grilla.Size = new System.Drawing.Size(720, 391);
+            this.Grilla.Size = new System.Drawing.Size(783, 391);
             this.Grilla.TabIndex = 5;
             // 
             // btnBuscar
@@ -104,15 +116,15 @@
             this.dpFechaDesde.Size = new System.Drawing.Size(200, 26);
             this.dpFechaDesde.TabIndex = 0;
             // 
-            // FrmConsultaFalta
+            // FrmListadoDiarioFalta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 496);
+            this.ClientSize = new System.Drawing.Size(826, 471);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmConsultaFalta";
-            this.Text = "FrmConsultaFalta";
-            this.Load += new System.EventHandler(this.FrmConsultaFalta_Load);
+            this.Name = "FrmListadoDiarioFalta";
+            this.Text = "FrmListadoDiarioFalta";
+            this.Load += new System.EventHandler(this.FrmListadoDiarioFalta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).EndInit();
@@ -123,11 +135,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView Grilla;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dpFechaHasta;
         private System.Windows.Forms.DateTimePicker dpFechaDesde;
-        private System.Windows.Forms.DataGridView Grilla;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnAnular;
     }
 }

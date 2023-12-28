@@ -34,7 +34,7 @@ namespace ESCUELA
             cFalta falta = new Clases.cFalta();
             DataTable trdo = falta.GetFaltas(FechaDesde, FechaHasta);
             Grilla.DataSource = trdo;
-            fun.AnchoColumnas(Grilla, "0;20;20;10;10;10;10;10;10");
+            fun.AnchoColumnas(Grilla, "0;20;20;8;8;8;8;8;8;12");
         }
     }
 }

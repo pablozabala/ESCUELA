@@ -132,6 +132,12 @@
     <Compile Include="FrmListadoCargos.Designer.cs">
       <DependentUpon>FrmListadoCargos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListadoDiarioFalta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoDiarioFalta.Designer.cs">
+      <DependentUpon>FrmListadoDiarioFalta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmListadoDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoCargos.resx">
       <DependentUpon>FrmListadoCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoDiarioFalta.resx">
+      <DependentUpon>FrmListadoDiarioFalta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoDocente.resx">
       <DependentUpon>FrmListadoDocente.cs</DependentUpon>

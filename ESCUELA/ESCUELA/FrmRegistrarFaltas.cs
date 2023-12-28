@@ -39,6 +39,8 @@ namespace ESCUELA
             trdo = fun.AgregarFilas(trdo, Val);
             Val = "5;Licencia x Estudio";
             trdo = fun.AgregarFilas(trdo, Val);
+            Val = "6;Paro";
+            trdo = fun.AgregarFilas(trdo, Val);
             cmbMotivo.DataSource = trdo;
             cmbMotivo.ValueMember = "Codigo";
             cmbMotivo.DisplayMember = "Tipo";
@@ -61,6 +63,7 @@ namespace ESCUELA
             DateTime Fecha = dpFecha.Value;
 
             int aa = 0, cm = 0, c3 = 0, fg = 0, le = 0;
+            int Paro = 0;
             int COdMotivo = Convert.ToInt32(cmbMotivo.SelectedValue);
             switch(COdMotivo)
             {
@@ -70,6 +73,7 @@ namespace ESCUELA
                     c3 = 0;
                     fg = 0;
                     le = 0;
+                    Paro = 0;
                     break;
                 case 2:
                     aa = 0;
@@ -77,6 +81,7 @@ namespace ESCUELA
                     c3 = 0;
                     fg = 0;
                     le = 0;
+                    Paro = 0;
                     break;
                 case 3:
                     aa = 0;
@@ -84,6 +89,7 @@ namespace ESCUELA
                     c3 = 1;
                     fg = 0;
                     le = 0;
+                    Paro = 0;
                     break;
                 case 4:
                     aa = 0;
@@ -91,6 +97,7 @@ namespace ESCUELA
                     c3 = 0;
                     fg = 1;
                     le = 0;
+                    Paro = 0;
                     break;
                 case 5:
                     aa = 0;
@@ -98,11 +105,20 @@ namespace ESCUELA
                     c3 = 0;
                     fg = 0;
                     le = 1;
+                    Paro = 0;
+                    break;
+                case 6:
+                    aa = 0;
+                    cm = 0;
+                    c3 = 0;
+                    fg = 0;
+                    le = 0;
+                    Paro = 1;
                     break;
             }
 
             cFalta falta = new cFalta();
-            falta.Insertar(CodDocente, Fecha, aa, cm,c3,fg, le);
+            falta.Insertar(CodDocente, Fecha, aa, cm,c3,fg, le, Paro);
             MessageBox.Show("Datos grabados correctamente");
             txtCodDocente.Text = "";
             txtApellido.Text = "";
