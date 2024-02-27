@@ -183,5 +183,17 @@ namespace ESCUELA
             FrmListadoDiarioFalta frm = new FrmListadoDiarioFalta();
             frm.Show();
         }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarCertificados frm = new FrmRegistrarCertificados();
+            frm.Show();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarCertificados frm = new FrmConsultarCertificados();
+            frm.Show();
+        }
     }
 }

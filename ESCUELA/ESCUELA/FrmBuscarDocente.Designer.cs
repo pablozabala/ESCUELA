@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.Grilla = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
@@ -56,13 +56,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de Docnetes";
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(466, 291);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 30);
+            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(10, 80);
+            this.Grilla.Location = new System.Drawing.Point(6, 81);
             this.Grilla.Name = "Grilla";
             this.Grilla.RowTemplate.Height = 24;
-            this.Grilla.Size = new System.Drawing.Size(535, 194);
+            this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grilla.Size = new System.Drawing.Size(543, 194);
             this.Grilla.TabIndex = 5;
             // 
             // btnBuscar
@@ -107,16 +118,6 @@
             this.txtApellido.Size = new System.Drawing.Size(138, 26);
             this.txtApellido.TabIndex = 0;
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(466, 291);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 30);
-            this.btnAceptar.TabIndex = 6;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // FrmBuscarDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -125,7 +126,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmBuscarDocente";
-            this.Text = "FrmBuscarDocente";
+            this.Text = "Búsqueda de Docentes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).EndInit();
