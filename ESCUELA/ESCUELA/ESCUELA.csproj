@@ -60,6 +60,7 @@
     <Compile Include="Clases\cDocente.cs" />
     <Compile Include="Clases\cFalta.cs" />
     <Compile Include="Clases\cFunciones.cs" />
+    <Compile Include="Clases\cTardanza.cs" />
     <Compile Include="cMateria.cs" />
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
@@ -121,6 +122,12 @@
     <Compile Include="FrmConsultarCertificados.Designer.cs">
       <DependentUpon>FrmConsultarCertificados.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultarTardanza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultarTardanza.Designer.cs">
+      <DependentUpon>FrmConsultarTardanza.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCopia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +188,12 @@
     <Compile Include="FrmRegistroCargo.Designer.cs">
       <DependentUpon>FrmRegistroCargo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTardanza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTardanza.Designer.cs">
+      <DependentUpon>FrmTardanza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +233,9 @@
     <EmbeddedResource Include="FrmConsultarCertificados.resx">
       <DependentUpon>FrmConsultarCertificados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultarTardanza.resx">
+      <DependentUpon>FrmConsultarTardanza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCopia.resx">
       <DependentUpon>FrmCopia.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +266,9 @@
     <EmbeddedResource Include="FrmRegistroCargo.resx">
       <DependentUpon>FrmRegistroCargo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTardanza.resx">
+      <DependentUpon>FrmTardanza.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +298,7 @@
     <Content Include="Iconos\add.ico" />
     <Content Include="Iconos\cancel.ico" />
     <Content Include="Iconos\clie2.ico" />
+    <Content Include="Iconos\FOLDER100.ico" />
     <Content Include="Iconos\Grabar.png" />
     <Content Include="Iconos\Reloj.ico" />
     <Content Include="Iconos\statistics2.ico" />

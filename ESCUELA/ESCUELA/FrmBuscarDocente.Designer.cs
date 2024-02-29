@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBuscarDocente));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.Grilla = new System.Windows.Forms.DataGridView();
@@ -69,7 +70,7 @@
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(6, 81);
+            this.Grilla.Location = new System.Drawing.Point(10, 78);
             this.Grilla.Name = "Grilla";
             this.Grilla.RowTemplate.Height = 24;
             this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -78,18 +79,18 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(466, 27);
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(503, 32);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(50, 30);
             this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 43);
+            this.label2.Location = new System.Drawing.Point(249, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 3;
@@ -106,16 +107,16 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(322, 37);
+            this.txtNombre.Location = new System.Drawing.Point(323, 36);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(138, 26);
+            this.txtNombre.Size = new System.Drawing.Size(174, 26);
             this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(91, 37);
+            this.txtApellido.Location = new System.Drawing.Point(80, 37);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(138, 26);
+            this.txtApellido.Size = new System.Drawing.Size(152, 26);
             this.txtApellido.TabIndex = 0;
             // 
             // FrmBuscarDocente

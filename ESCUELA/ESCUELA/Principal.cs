@@ -195,5 +195,17 @@ namespace ESCUELA
             FrmConsultarCertificados frm = new FrmConsultarCertificados();
             frm.Show();
         }
+
+        private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmTardanza frm = new FrmTardanza();
+            frm.Show();
+        }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarTardanza frm = new FrmConsultarTardanza();
+            frm.Show();
+        }
     }
 }

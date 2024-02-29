@@ -46,6 +46,9 @@
             this.menuRegistrarFaltas = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faltasDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.BTNdOCENTES = new System.Windows.Forms.ToolStripButton();
@@ -59,9 +62,9 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.certificadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ausenciasRetrasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -74,7 +77,8 @@
             this.fileMenu,
             this.viewMenu,
             this.faltasToolStripMenuItem,
-            this.certificadosToolStripMenuItem});
+            this.certificadosToolStripMenuItem,
+            this.ausenciasRetrasoToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -95,7 +99,7 @@
             this.exitToolStripMenuItem});
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(67, 22);
+            this.fileMenu.Size = new System.Drawing.Size(67, 24);
             this.fileMenu.Text = "&Archivo";
             // 
             // newToolStripMenuItem
@@ -162,7 +166,7 @@
             this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargosToolStripMenuItem});
             this.viewMenu.Name = "viewMenu";
-            this.viewMenu.Size = new System.Drawing.Size(65, 22);
+            this.viewMenu.Size = new System.Drawing.Size(65, 24);
             this.viewMenu.Text = "Listado";
             // 
             // cargosToolStripMenuItem
@@ -203,6 +207,29 @@
             this.faltasDiariasToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.faltasDiariasToolStripMenuItem.Text = "Faltas Diarias";
             this.faltasDiariasToolStripMenuItem.Click += new System.EventHandler(this.faltasDiariasToolStripMenuItem_Click);
+            // 
+            // certificadosToolStripMenuItem
+            // 
+            this.certificadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem,
+            this.consultarToolStripMenuItem});
+            this.certificadosToolStripMenuItem.Name = "certificadosToolStripMenuItem";
+            this.certificadosToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.certificadosToolStripMenuItem.Text = "Certificados";
+            // 
+            // registrarToolStripMenuItem
+            // 
+            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
@@ -319,28 +346,28 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(52, 18);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // certificadosToolStripMenuItem
+            // ausenciasRetrasoToolStripMenuItem
             // 
-            this.certificadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem,
-            this.consultarToolStripMenuItem});
-            this.certificadosToolStripMenuItem.Name = "certificadosToolStripMenuItem";
-            this.certificadosToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
-            this.certificadosToolStripMenuItem.Text = "Certificados";
+            this.ausenciasRetrasoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem1,
+            this.consultasToolStripMenuItem});
+            this.ausenciasRetrasoToolStripMenuItem.Name = "ausenciasRetrasoToolStripMenuItem";
+            this.ausenciasRetrasoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.ausenciasRetrasoToolStripMenuItem.Text = "Ausencias/Tardanza";
             // 
-            // registrarToolStripMenuItem
+            // registrarToolStripMenuItem1
             // 
-            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.registrarToolStripMenuItem.Text = "Registrar";
-            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
+            this.registrarToolStripMenuItem1.Name = "registrarToolStripMenuItem1";
+            this.registrarToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.registrarToolStripMenuItem1.Text = "Registrar";
+            this.registrarToolStripMenuItem1.Click += new System.EventHandler(this.registrarToolStripMenuItem1_Click);
             // 
-            // consultarToolStripMenuItem
+            // consultasToolStripMenuItem
             // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.consultarToolStripMenuItem.Text = "Consultar";
-            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -402,6 +429,9 @@
         private System.Windows.Forms.ToolStripMenuItem certificadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ausenciasRetrasoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
     }
 }
 

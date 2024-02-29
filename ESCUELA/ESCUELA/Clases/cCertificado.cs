@@ -29,7 +29,7 @@ namespace ESCUELA.Clases
 
         public DataTable GetCertificadosxFecha(DateTime FechaDesde, DateTime FechaHasta, Int32? CodDocente)
         {
-            string sql = "select d.CodDocente,d.Nombre, d.Apellido ,t.Nombre as Certificado , c.Fecha ";
+            string sql = "select d.CodDocente,d.Apellido, d.Nombre  ,t.Nombre as Certificado , c.Fecha ";
             sql = sql + " from Docente d, Certificado c , tipocertificado t ";
             sql = sql + " where d.CodDocente=c.CodDocente ";
             sql = sql + " and c.CodTipo = t.CodTipo ";
@@ -40,6 +40,8 @@ namespace ESCUELA.Clases
             {
                 sql = sql + " and d.CodDocente =" + CodDocente.ToString();
             }
+
+            sql = sql + " order by d.Apellido,d.Nombre ";
 
             return cDb.GetDatatable(sql);
 

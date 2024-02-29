@@ -19,6 +19,11 @@ namespace ESCUELA
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            BuscarCertificdos();
+        }
+
+        public void BuscarCertificdos()
+        {
             DateTime FechaDesde = dpFechaDesde.Value;
             DateTime FechaHasta = dpFechaHasta.Value;
             Int32? CodDocente = null;
@@ -62,6 +67,7 @@ namespace ESCUELA
                     string NomApe = Nombre + " " + Apellido;
                     txtDocente.Text = NomApe;
                     txtCodDocente.Text = trdo.Rows[0]["CodDocente"].ToString();
+                    BuscarCertificdos();
                 }
             }
         }

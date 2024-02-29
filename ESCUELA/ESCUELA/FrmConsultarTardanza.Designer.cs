@@ -1,6 +1,6 @@
 ﻿namespace ESCUELA
 {
-    partial class FrmConsultarCertificados
+    partial class FrmConsultarTardanza
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultarCertificados));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultarTardanza));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtCodDocente = new System.Windows.Forms.TextBox();
@@ -58,10 +58,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dpFechaHasta);
             this.groupBox1.Controls.Add(this.dpFechaDesde);
-            this.groupBox1.Location = new System.Drawing.Point(-3, -3);
+            this.groupBox1.Location = new System.Drawing.Point(-7, -4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 472);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(744, 480);
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // btnLimpiar
@@ -72,7 +72,6 @@
             this.btnLimpiar.Size = new System.Drawing.Size(50, 34);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtCodDocente
             // 
@@ -107,7 +106,6 @@
             this.btnBuscarDocente.Size = new System.Drawing.Size(50, 34);
             this.btnBuscarDocente.TabIndex = 6;
             this.btnBuscarDocente.UseVisualStyleBackColor = true;
-            this.btnBuscarDocente.Click += new System.EventHandler(this.btnBuscarDocente_Click);
             // 
             // Grilla
             // 
@@ -127,7 +125,6 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
@@ -161,15 +158,15 @@
             this.dpFechaDesde.Size = new System.Drawing.Size(159, 26);
             this.dpFechaDesde.TabIndex = 0;
             // 
-            // FrmConsultarCertificados
+            // FrmConsultarTardanza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 487);
+            this.ClientSize = new System.Drawing.Size(746, 480);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmConsultarCertificados";
-            this.Text = "FrmConsultarCertificados";
-            this.Load += new System.EventHandler(this.FrmConsultarCertificados_Load);
+            this.Name = "FrmConsultarTardanza";
+            this.Text = "FrmConsultarTardanza";
+            this.Load += new System.EventHandler(this.FrmConsultarTardanza_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).EndInit();
@@ -180,16 +177,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.TextBox txtCodDocente;
+        private System.Windows.Forms.TextBox txtDocente;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnBuscarDocente;
         private System.Windows.Forms.DataGridView Grilla;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dpFechaHasta;
         private System.Windows.Forms.DateTimePicker dpFechaDesde;
-        private System.Windows.Forms.Button btnBuscarDocente;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodDocente;
-        private System.Windows.Forms.TextBox txtDocente;
-        private System.Windows.Forms.Button btnLimpiar;
     }
 }

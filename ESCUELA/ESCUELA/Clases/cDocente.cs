@@ -39,7 +39,7 @@ namespace ESCUELA.Clases
         public DataTable GetDocente(string Apellido, string Nombre)
         {
             string sql = "";
-            sql = " select CodDocente,Apellido, Nombre  ";
+            sql = " select CodDocente,Apellido, Nombre";
             sql = sql + " from Docente ";
             if (Apellido !="")
             {
