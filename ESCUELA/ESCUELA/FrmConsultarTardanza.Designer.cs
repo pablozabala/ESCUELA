@@ -72,6 +72,7 @@
             this.btnLimpiar.Size = new System.Drawing.Size(50, 34);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtCodDocente
             // 
@@ -106,6 +107,7 @@
             this.btnBuscarDocente.Size = new System.Drawing.Size(50, 34);
             this.btnBuscarDocente.TabIndex = 6;
             this.btnBuscarDocente.UseVisualStyleBackColor = true;
+            this.btnBuscarDocente.Click += new System.EventHandler(this.btnBuscarDocente_Click);
             // 
             // Grilla
             // 
@@ -125,6 +127,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 

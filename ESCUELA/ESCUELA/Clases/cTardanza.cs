@@ -23,16 +23,22 @@ namespace ESCUELA.Clases
             cDb.Grabar(sql);
         }
 
-        public DataTable GetTardanza(DateTime FechaDesde, DateTime FechaHasta)
+        public DataTable GetTardanza(DateTime FechaDesde, DateTime FechaHasta, Int32? CodDocente )
         {
             string sql = "";
-            sql = sql + " select (d.Apellido + ' ' + d.Nombre) as Doc ";
-            sql = " ,m.Nombre , t.Fecha";
+            sql =  " select (d.Apellido + ' ' + d.Nombre) as Doc ";
+            sql = sql +  " ,m.Nombre as Motivo , t.Fecha";
             sql = sql + " from Tardanza t ,MotivoTardanza  m , Docente d ";
             sql = sql + " where t.CodMotivo = m.CodMotivo";
             sql = sql + " and t.CodDocente=d.CodDocente ";
             sql = sql + " and t.Fecha >=" + "'" + FechaDesde.ToShortDateString() + "'";
             sql = sql + " and t.Fecha <=" + "'" + FechaHasta.ToShortDateString() + "'";
+
+            if (CodDocente !=null)
+            {
+                sql = sql + " and t.CodDocente=" + CodDocente.ToString();
+            }
+
             return cDb.GetDatatable(sql);
         }
     }
