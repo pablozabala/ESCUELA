@@ -168,7 +168,7 @@
             this.ClientSize = new System.Drawing.Size(746, 480);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmConsultarTardanza";
-            this.Text = "FrmConsultarTardanza";
+            this.Text = "Formulario de Consultas Ausencias / Tardanzas";
             this.Load += new System.EventHandler(this.FrmConsultarTardanza_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

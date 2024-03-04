@@ -60,6 +60,7 @@
     <Compile Include="Clases\cDocente.cs" />
     <Compile Include="Clases\cFalta.cs" />
     <Compile Include="Clases\cFunciones.cs" />
+    <Compile Include="Clases\cIncidencia.cs" />
     <Compile Include="Clases\cTardanza.cs" />
     <Compile Include="cMateria.cs" />
     <Compile Include="FormBase.cs">
@@ -158,6 +159,12 @@
     <Compile Include="FrmListadoDocente.Designer.cs">
       <DependentUpon>FrmListadoDocente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListadoIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoIncidencia.Designer.cs">
+      <DependentUpon>FrmListadoIncidencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrueba.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +188,12 @@
     </Compile>
     <Compile Include="FrmRegistrarFaltas.Designer.cs">
       <DependentUpon>FrmRegistrarFaltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarIncidente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarIncidente.Designer.cs">
+      <DependentUpon>FrmRegistrarIncidente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistroCargo.cs">
       <SubType>Form</SubType>
@@ -251,6 +264,9 @@
     <EmbeddedResource Include="FrmListadoDocente.resx">
       <DependentUpon>FrmListadoDocente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoIncidencia.resx">
+      <DependentUpon>FrmListadoIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarFaltas.resx">
       <DependentUpon>FrmRegistrarFaltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarIncidente.resx">
+      <DependentUpon>FrmRegistrarIncidente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistroCargo.resx">
       <DependentUpon>FrmRegistroCargo.cs</DependentUpon>
@@ -292,7 +311,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Iconos\add.ico" />

@@ -49,6 +49,9 @@
             this.certificadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ausenciasRetrasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.BTNdOCENTES = new System.Windows.Forms.ToolStripButton();
@@ -62,9 +65,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.ausenciasRetrasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -164,7 +165,8 @@
             // viewMenu
             // 
             this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargosToolStripMenuItem});
+            this.cargosToolStripMenuItem,
+            this.incidenciasToolStripMenuItem});
             this.viewMenu.Name = "viewMenu";
             this.viewMenu.Size = new System.Drawing.Size(65, 24);
             this.viewMenu.Text = "Listado";
@@ -172,7 +174,7 @@
             // cargosToolStripMenuItem
             // 
             this.cargosToolStripMenuItem.Name = "cargosToolStripMenuItem";
-            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
+            this.cargosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.cargosToolStripMenuItem.Text = "Cargos";
             this.cargosToolStripMenuItem.Click += new System.EventHandler(this.cargosToolStripMenuItem_Click);
             // 
@@ -230,6 +232,29 @@
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.consultarToolStripMenuItem.Text = "Consultar";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            // 
+            // ausenciasRetrasoToolStripMenuItem
+            // 
+            this.ausenciasRetrasoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem1,
+            this.consultasToolStripMenuItem});
+            this.ausenciasRetrasoToolStripMenuItem.Name = "ausenciasRetrasoToolStripMenuItem";
+            this.ausenciasRetrasoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.ausenciasRetrasoToolStripMenuItem.Text = "Ausencias/Tardanza";
+            // 
+            // registrarToolStripMenuItem1
+            // 
+            this.registrarToolStripMenuItem1.Name = "registrarToolStripMenuItem1";
+            this.registrarToolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
+            this.registrarToolStripMenuItem1.Text = "Registrar";
+            this.registrarToolStripMenuItem1.Click += new System.EventHandler(this.registrarToolStripMenuItem1_Click);
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
@@ -346,28 +371,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(52, 18);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // ausenciasRetrasoToolStripMenuItem
+            // incidenciasToolStripMenuItem
             // 
-            this.ausenciasRetrasoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem1,
-            this.consultasToolStripMenuItem});
-            this.ausenciasRetrasoToolStripMenuItem.Name = "ausenciasRetrasoToolStripMenuItem";
-            this.ausenciasRetrasoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.ausenciasRetrasoToolStripMenuItem.Text = "Ausencias/Tardanza";
-            // 
-            // registrarToolStripMenuItem1
-            // 
-            this.registrarToolStripMenuItem1.Name = "registrarToolStripMenuItem1";
-            this.registrarToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
-            this.registrarToolStripMenuItem1.Text = "Registrar";
-            this.registrarToolStripMenuItem1.Click += new System.EventHandler(this.registrarToolStripMenuItem1_Click);
-            // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
+            this.incidenciasToolStripMenuItem.Name = "incidenciasToolStripMenuItem";
+            this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.incidenciasToolStripMenuItem.Text = "Incidencias";
+            this.incidenciasToolStripMenuItem.Click += new System.EventHandler(this.incidenciasToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -432,6 +441,7 @@
         private System.Windows.Forms.ToolStripMenuItem ausenciasRetrasoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incidenciasToolStripMenuItem;
     }
 }
 

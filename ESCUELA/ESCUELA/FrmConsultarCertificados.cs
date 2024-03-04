@@ -43,6 +43,7 @@ namespace ESCUELA
             dpFechaHasta.Value = Fecha;
             Fecha = Fecha.AddMonths(-1);
             dpFechaDesde.Value = Fecha;
+            BuscarCertificdos();
         }
 
         private void btnBuscarDocente_Click(object sender, EventArgs e)

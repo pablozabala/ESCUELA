@@ -43,7 +43,7 @@ namespace ESCUELA
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            FrmAbmConvocatoria frm = new ESCUELA.FrmAbmConvocatoria();
+            FrmAbmConvocatoria frm = new FrmAbmConvocatoria();
             frm.Show();
         }
 
@@ -205,6 +205,12 @@ namespace ESCUELA
         private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsultarTardanza frm = new FrmConsultarTardanza();
+            frm.Show();
+        }
+
+        private void incidenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoIncidencia frm = new ESCUELA.FrmListadoIncidencia();
             frm.Show();
         }
     }

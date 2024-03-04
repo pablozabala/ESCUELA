@@ -47,17 +47,20 @@
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.Combo);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(679, 465);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(675, 455);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(588, 432);
+            this.btnAceptar.Location = new System.Drawing.Point(564, 418);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(94, 29);
             this.btnAceptar.TabIndex = 52;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -65,27 +68,30 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(257, 36);
+            this.txtBuscar.Location = new System.Drawing.Point(305, 20);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(236, 23);
+            this.txtBuscar.Size = new System.Drawing.Size(294, 26);
             this.txtBuscar.TabIndex = 51;
             // 
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(19, 67);
+            this.Grilla.Location = new System.Drawing.Point(8, 56);
+            this.Grilla.Margin = new System.Windows.Forms.Padding(4);
             this.Grilla.Name = "Grilla";
             this.Grilla.ReadOnly = true;
             this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grilla.Size = new System.Drawing.Size(644, 359);
+            this.Grilla.Size = new System.Drawing.Size(650, 354);
             this.Grilla.TabIndex = 50;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(499, 33);
+            this.btnBuscar.Location = new System.Drawing.Point(608, 11);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(50, 35);
             this.btnBuscar.TabIndex = 49;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -94,19 +100,21 @@
             // 
             this.Combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Combo.FormattingEnabled = true;
-            this.Combo.Location = new System.Drawing.Point(19, 33);
+            this.Combo.Location = new System.Drawing.Point(8, 20);
+            this.Combo.Margin = new System.Windows.Forms.Padding(4);
             this.Combo.Name = "Combo";
-            this.Combo.Size = new System.Drawing.Size(232, 24);
+            this.Combo.Size = new System.Drawing.Size(289, 28);
             this.Combo.TabIndex = 0;
             // 
             // FrmBuscadorGenerico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 489);
+            this.ClientSize = new System.Drawing.Size(699, 479);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmBuscadorGenerico";
-            this.Text = "FrmBuscadorGenerico";
+            this.Text = "Formulario de Consultas";
             this.Load += new System.EventHandler(this.FrmBuscadorGenerico_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

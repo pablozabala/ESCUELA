@@ -20,9 +20,9 @@ namespace ESCUELA
 
         private void FrmAbmConvocatoria_Load(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            MessageBox.Show("no autorizado");
-            this.Close();
+            //this.Enabled = false;
+          //  MessageBox.Show("no autorizado");
+          //  this.Close();
             fun = new Clases.cFunciones();
             Botonera(1);
             Grupo.Enabled = false;
