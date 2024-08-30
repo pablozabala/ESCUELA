@@ -9,6 +9,11 @@ namespace ESCUELA.Clases
 {
     public static class cDb
     {
+        public static string  GetCadena()
+        {
+            string cadena = "Data Source=SERVIDOR-PC;Initial Catalog=ESCUELA;User ID=sa;Password=123";
+            return cadena;
+        }
         public static  DataTable  GetDatatable(string sql)
         {
             SqlConnection con = new SqlConnection(cConexion.GetConexion());

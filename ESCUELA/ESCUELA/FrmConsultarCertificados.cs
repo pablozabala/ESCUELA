@@ -34,7 +34,7 @@ namespace ESCUELA
             DataTable trdo = cer.GetCertificadosxFecha(FechaDesde, FechaHasta, CodDocente);
             Grilla.DataSource = trdo;
             cFunciones fun = new cFunciones();
-            fun.AnchoColumnas(Grilla, "0;25;30;30;15");
+            fun.AnchoColumnas(Grilla, "0;0;25;30;30;15");
         }
 
         private void FrmConsultarCertificados_Load(object sender, EventArgs e)
@@ -77,6 +77,30 @@ namespace ESCUELA
         {
             txtCodDocente.Text = "";
             txtDocente.Text = "";
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (Grilla.CurrentRow ==null)
+            {
+                MessageBox.Show("Debe seleccionar un elemento");
+                return;
+            }
+
+            var Resul = MessageBox.Show("Confirma Elimianr", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (Resul == DialogResult.Yes)
+            {
+                Int32 Codigo = Convert.ToInt32(Grilla.CurrentRow.Cells[0].Value);
+                cCertificado cert = new cCertificado();
+                cert.Eliminar(Codigo);
+                MessageBox.Show("Datos eliminados correctamente");
+                BuscarCertificdos();
+            }
+           
+
+            
+            
         }
     }
 }

@@ -70,8 +70,10 @@ namespace ESCUELA
             Int32 CodDocente = Convert.ToInt32(txtCodDocente.Text);
             DateTime Fecha = dpFecha.Value;
             Int32 CodTipo = Convert.ToInt32(cmbCertificado.SelectedValue);
+            string Observacion = txtObservaciom.Text;
+
             cCertificado cer = new cCertificado();
-            cer.Registrar(CodTipo, Fecha, CodDocente);
+            cer.Registrar(CodTipo, Fecha, CodDocente, Observacion);
             MessageBox.Show("Datos grabados correctamente"); 
         }
     }

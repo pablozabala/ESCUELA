@@ -8,10 +8,10 @@ namespace ESCUELA.Clases
 {
     public class cTardanza
     {
-        public void Registrar(Int32 CodDocente, Int32? CodMotivo, DateTime Fecha)
+        public void Registrar(Int32 CodDocente, Int32? CodMotivo, DateTime Fecha, string Observacion)
         {
             string sql = "insert into Tardanza(";
-            sql = sql + "CodMotivo,Fecha,CodDocente)";
+            sql = sql + "CodMotivo,Fecha,CodDocente,Observacion)";
             sql = sql + " values (";
             if (CodMotivo != null)
                 sql = sql + CodMotivo.ToString();
@@ -19,6 +19,7 @@ namespace ESCUELA.Clases
                 sql = sql + "null";
             sql = sql + "," + "'" + Fecha.ToShortDateString() + "'";
             sql = sql + "," + CodDocente.ToString();
+            sql = sql + "," + "'" + Observacion + "'";
             sql = sql + ")";
             cDb.Grabar(sql);
         }
@@ -26,7 +27,7 @@ namespace ESCUELA.Clases
         public DataTable GetTardanza(DateTime FechaDesde, DateTime FechaHasta, Int32? CodDocente )
         {
             string sql = "";
-            sql =  " select (d.Apellido + ' ' + d.Nombre) as Doc ";
+            sql = " select t.CodTardanza , (d.Apellido + ' ' + d.Nombre) as Doc ";
             sql = sql +  " ,m.Nombre as Motivo , t.Fecha";
             sql = sql + " from Tardanza t ,MotivoTardanza  m , Docente d ";
             sql = sql + " where t.CodMotivo = m.CodMotivo";
@@ -40,6 +41,13 @@ namespace ESCUELA.Clases
             }
 
             return cDb.GetDatatable(sql);
+        }
+
+        public void Eliminar(Int32 CodTardanza)
+        {
+            string sql = " delete from Tardanza ";
+            sql = sql + " where CodTardanza=" + CodTardanza.ToString();
+            cDb.Grabar(sql);
         }
     }
 }

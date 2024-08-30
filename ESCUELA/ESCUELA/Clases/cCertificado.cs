@@ -15,21 +15,22 @@ namespace ESCUELA.Clases
             return cDb.GetDatatable(sql);
         }
 
-        public void Registrar (int CodTipo , DateTime Fecha, int CodDocente)
+        public void Registrar (int CodTipo , DateTime Fecha, int CodDocente, string Observacion)
         {
             string sql = "insert into Certificado ";
-            sql = sql + " (CodTipo,Fecha,CodDocente)";
+            sql = sql + " (CodTipo,Fecha,CodDocente,Observacion)";
             sql = sql + " values (";
             sql = sql + CodTipo.ToString();
             sql = sql + "," + "'" + Fecha.ToShortDateString() + "'";
             sql = sql + "," + CodDocente.ToString();
+            sql = sql + "," + "'" + Observacion + "'";
             sql = sql + ")";
             cDb.Grabar(sql);
         }
 
         public DataTable GetCertificadosxFecha(DateTime FechaDesde, DateTime FechaHasta, Int32? CodDocente)
         {
-            string sql = "select d.CodDocente,d.Apellido, d.Nombre  ,t.Nombre as Certificado , c.Fecha ";
+            string sql = "select c.CodCertificado,d.CodDocente,d.Apellido, d.Nombre  ,t.Nombre as Certificado , c.Fecha ";
             sql = sql + " from Docente d, Certificado c , tipocertificado t ";
             sql = sql + " where d.CodDocente=c.CodDocente ";
             sql = sql + " and c.CodTipo = t.CodTipo ";
@@ -45,6 +46,13 @@ namespace ESCUELA.Clases
 
             return cDb.GetDatatable(sql);
 
+        }
+
+        public void Eliminar(Int32 CodCertificado)
+        {
+            string sql = "delete from Certificado ";
+            sql = sql + " where CodCertificado=" + CodCertificado.ToString();
+            cDb.Grabar(sql);
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ESCUELA.Clases;
 namespace ESCUELA
 {
-    public partial class FrmRegistrarFaltas : FrmBase
+    public partial class FrmRegistrarFaltas : FormBase
     {
         public FrmRegistrarFaltas()
         {
@@ -41,6 +41,10 @@ namespace ESCUELA
             trdo = fun.AgregarFilas(trdo, Val);
             Val = "6;Paro";
             trdo = fun.AgregarFilas(trdo, Val);
+            Val = "7;Paro Transporte";
+            trdo = fun.AgregarFilas(trdo, Val);
+            Val = "8;ART";
+            trdo = fun.AgregarFilas(trdo, Val);
             cmbMotivo.DataSource = trdo;
             cmbMotivo.ValueMember = "Codigo";
             cmbMotivo.DisplayMember = "Tipo";
@@ -62,8 +66,8 @@ namespace ESCUELA
             int CodDocente = Convert.ToInt32(txtCodDocente.Text);
             DateTime Fecha = dpFecha.Value;
 
-            int aa = 0, cm = 0, c3 = 0, fg = 0, le = 0;
-            int Paro = 0;
+            int aa = 0, cm = 0, c3 = 0, fg = 0, le = 0, Art = 0;
+            int Paro = 0, Pt = 0;
             int COdMotivo = Convert.ToInt32(cmbMotivo.SelectedValue);
             switch(COdMotivo)
             {
@@ -74,6 +78,8 @@ namespace ESCUELA
                     fg = 0;
                     le = 0;
                     Paro = 0;
+                    Pt = 0;
+                    Art = 0;
                     break;
                 case 2:
                     aa = 0;
@@ -82,6 +88,8 @@ namespace ESCUELA
                     fg = 0;
                     le = 0;
                     Paro = 0;
+                    Pt = 0;
+                    Art = 0;
                     break;
                 case 3:
                     aa = 0;
@@ -90,6 +98,8 @@ namespace ESCUELA
                     fg = 0;
                     le = 0;
                     Paro = 0;
+                    Pt = 0;
+                    Art = 0;
                     break;
                 case 4:
                     aa = 0;
@@ -98,6 +108,8 @@ namespace ESCUELA
                     fg = 1;
                     le = 0;
                     Paro = 0;
+                    Pt = 0;
+                    Art = 0;
                     break;
                 case 5:
                     aa = 0;
@@ -105,7 +117,9 @@ namespace ESCUELA
                     c3 = 0;
                     fg = 0;
                     le = 1;
+                    Pt = 0;
                     Paro = 0;
+                    Art = 0;
                     break;
                 case 6:
                     aa = 0;
@@ -113,16 +127,38 @@ namespace ESCUELA
                     c3 = 0;
                     fg = 0;
                     le = 0;
+                    Pt = 0;
                     Paro = 1;
+                    Art = 0;
+                    break;
+                case 7:
+                    aa = 0;
+                    cm = 0;
+                    c3 = 0;
+                    fg = 0;
+                    le = 0;
+                    Paro = 0;
+                    Pt = 1;
+                    Art = 0;
+                    break;
+                case 8:
+                    aa = 0;
+                    cm = 0;
+                    c3 = 0;
+                    fg = 0;
+                    le = 0;
+                    Paro = 0;
+                    Pt = 0;
+                    Art = 1;
                     break;
             }
 
             cFalta falta = new cFalta();
-            falta.Insertar(CodDocente, Fecha, aa, cm,c3,fg, le, Paro);
+            falta.Insertar(CodDocente, Fecha, aa, cm,c3,fg, le, Paro,Pt, Art );
             MessageBox.Show("Datos grabados correctamente");
-            txtCodDocente.Text = "";
-            txtApellido.Text = "";
-            txtNombre.Text = "";
+          //  txtCodDocente.Text = "";
+         //   txtApellido.Text = "";
+         //   txtNombre.Text = "";
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

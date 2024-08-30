@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ESCUELA.Clases;
 namespace ESCUELA
 {
-    public partial class FrmConsultaFalta : FrmBase
+    public partial class FrmConsultaFalta : FormBase 
     {
         public FrmConsultaFalta()
         {
@@ -34,7 +34,7 @@ namespace ESCUELA
             cFalta falta = new Clases.cFalta();
             DataTable trdo = falta.GetFaltas(FechaDesde, FechaHasta);
             Grilla.DataSource = trdo;
-            fun.AnchoColumnas(Grilla, "0;20;20;8;8;8;8;8;8;12");
+            fun.AnchoColumnas(Grilla, "0;16;12;8;8;8;8;8;8;8;8;8");
         }
     }
 }

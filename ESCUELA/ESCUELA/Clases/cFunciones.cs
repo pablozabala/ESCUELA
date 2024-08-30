@@ -525,14 +525,18 @@ namespace ESCUELA.Clases
                             CajaTexto.Text = "";
                         }
 
-
-
                         if (nombre.Substring(0, 4) == "cmb_")
                         {
                             ComboBox Combo = (ComboBox)g;
                             string[] vec = nombre.Split('_');
                             if (Combo.Items.Count > 0)
                                 Combo.SelectedIndex = 0;
+                        }
+
+                        if (nombre.Substring(0, 4) == "chk_")
+                        {
+                            CheckBox chk = (CheckBox)g;
+                            chk.Checked = false;
                         }
                     }
                 }
@@ -589,6 +593,17 @@ namespace ESCUELA.Clases
                             string[] vec = nombre.Split('_');
                             MaskedTextBox CajaTextoMascara = (MaskedTextBox)g;
                             CajaTextoMascara.Text = trdo.Rows[0][vec[1]].ToString();
+                        }
+
+                        if (nombre.Substring(0, 4) == "chk_")
+                        {
+                            CheckBox  check = (CheckBox)g;
+                            string[] vec = nombre.Split('_');
+                            string Resul = trdo.Rows[0][vec[1].ToString()].ToString();
+                            if (Resul == "1")
+                                check.Checked = true;
+                            else
+                                check.Checked = false;
                         }
                     }
                 }

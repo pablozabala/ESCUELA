@@ -41,7 +41,7 @@ namespace ESCUELA
             Grilla.DataSource = trdo;
 
             cFunciones fun = new cFunciones();
-            fun.AnchoColumnas(Grilla, "50;25;25");
+            fun.AnchoColumnas(Grilla, "0;50;25;25");
 
         }
 
@@ -81,6 +81,27 @@ namespace ESCUELA
         {
             txtCodDocente.Text = "";
             txtDocente.Text = "";
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (Grilla.CurrentRow ==null)
+            {
+                MessageBox.Show("Debe seleccionar en elemento ");
+                return; 
+            }
+
+            var Resul = MessageBox.Show("Confirma Elimianr", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Resul == DialogResult.Yes)
+            {
+                Int32 Codigo = Convert.ToInt32(Grilla.CurrentRow.Cells[0].Value);
+                cTardanza tardanza = new cTardanza();
+                tardanza.Eliminar(Codigo);
+                MessageBox.Show("Datos eliminados correctamente");
+                Consultar();
+            }
+
         }
     }
 }

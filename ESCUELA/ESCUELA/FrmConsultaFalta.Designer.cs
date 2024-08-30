@@ -49,22 +49,23 @@
             this.groupBox1.Controls.Add(this.dpFechaDesde);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 472);
+            this.groupBox1.Size = new System.Drawing.Size(852, 472);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(20, 57);
+            this.Grilla.Location = new System.Drawing.Point(6, 52);
             this.Grilla.Name = "Grilla";
             this.Grilla.RowTemplate.Height = 24;
-            this.Grilla.Size = new System.Drawing.Size(720, 391);
+            this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grilla.Size = new System.Drawing.Size(840, 391);
             this.Grilla.TabIndex = 5;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(564, 17);
+            this.btnBuscar.Location = new System.Drawing.Point(393, 11);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 34);
             this.btnBuscar.TabIndex = 4;
@@ -75,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(286, 25);
+            this.label2.Location = new System.Drawing.Point(211, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 3;
@@ -92,23 +93,25 @@
             // 
             // dpFechaHasta
             // 
-            this.dpFechaHasta.Location = new System.Drawing.Point(346, 20);
+            this.dpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpFechaHasta.Location = new System.Drawing.Point(271, 20);
             this.dpFechaHasta.Name = "dpFechaHasta";
-            this.dpFechaHasta.Size = new System.Drawing.Size(200, 26);
+            this.dpFechaHasta.Size = new System.Drawing.Size(116, 26);
             this.dpFechaHasta.TabIndex = 1;
             // 
             // dpFechaDesde
             // 
-            this.dpFechaDesde.Location = new System.Drawing.Point(80, 25);
+            this.dpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpFechaDesde.Location = new System.Drawing.Point(80, 20);
             this.dpFechaDesde.Name = "dpFechaDesde";
-            this.dpFechaDesde.Size = new System.Drawing.Size(200, 26);
+            this.dpFechaDesde.Size = new System.Drawing.Size(125, 26);
             this.dpFechaDesde.TabIndex = 0;
             // 
             // FrmConsultaFalta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 496);
+            this.ClientSize = new System.Drawing.Size(876, 496);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmConsultaFalta";
             this.Text = "FrmConsultaFalta";

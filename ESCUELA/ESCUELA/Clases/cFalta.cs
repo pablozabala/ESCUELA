@@ -8,13 +8,13 @@ namespace ESCUELA.Clases
 {
     public  class cFalta
     {
-        public void Insertar (int CodDocente, DateTime Fecha, int aa, int cm, int c3, int fg, int le, int Paro)
+        public void Insertar (int CodDocente, DateTime Fecha, int aa, int cm, int c3, int fg, int le, int Paro, int Pt, int Art)
         {
             // rf registro falta siempre esta en 1
             //para sacar el contador general 
             int rf = 1;
             string sql = "insert into Falta(";
-            sql = sql + "CodDocente,Fecha,aa,cm,c3,fg, le, rf,Paro";
+            sql = sql + "CodDocente,Fecha,aa,cm,c3,fg, le, rf,Paro, pt,Art";
             sql = sql + ")";
             sql = sql + " values ( " + CodDocente.ToString();
             sql = sql + "," + "'" + Fecha.ToShortDateString() + "'";
@@ -25,15 +25,17 @@ namespace ESCUELA.Clases
             sql = sql + "," + le.ToString();
             sql = sql + "," + rf.ToString();
             sql = sql + "," + Paro.ToString();
-            sql = sql + ")";  
+            sql = sql + "," + Pt.ToString();
+            sql = sql + "," + Art.ToString();  
+            sql = sql + ")";   
             cDb.Grabar(sql);
         }
 
         public DataTable GetFaltas (DateTime FechaDesde, DateTime FechaHasta)
         {
             string sql = "";
-            sql = "select d.CodDocente ,d.Nombre ,d.Apellido , sum (f.rf) as rf ";
-            sql = sql + ", sum(aa) as aa, sum(cm) as cm , sum(le) as le , sum (c3) as c3 , sum(fg) as fg , sum(Paro) as Paro ";
+            sql = "select d.CodDocente  ,d.Apellido,d.Nombre , sum (f.rf) as rf ";
+            sql = sql + ", sum(aa) as aa, sum(cm) as cm , sum(le) as le , sum (c3) as c3 , sum(fg) as fg , sum(Paro) as Paro , sum(Pt) as ParoT, sum(Art) as Art ";
             sql = sql + " from falta f  , docente d ";
             sql = sql + " where f.CodDocente = d.CodDocente ";
             sql = sql + " and f.Fecha>=" + "'" + FechaDesde.ToShortDateString() + "'";
@@ -43,7 +45,7 @@ namespace ESCUELA.Clases
             return cDb.GetDatatable(sql);
         }
 
-        public DataTable GetFaltasDiario(DateTime FechaDesde, DateTime FechaHasta)
+        public DataTable GetFaltasDiario(DateTime FechaDesde, DateTime FechaHasta, Int32? CodDocente)
         {
             string sql = "";
             sql = "select f.CodFalta,d.CodDocente ,d.Nombre ,d.Apellido ,f.Fecha, f.rf  ";
@@ -52,8 +54,9 @@ namespace ESCUELA.Clases
             sql = sql + " where f.CodDocente = d.CodDocente ";
             sql = sql + " and f.Fecha>=" + "'" + FechaDesde.ToShortDateString() + "'";
             sql = sql + " and f.Fecha<=" + "'" + FechaHasta.ToShortDateString() + "'";
-            
-            sql = sql + " order by f.CodFalta desc ";
+            if (CodDocente != null)
+                sql = sql + " and d.CodDocente =" + CodDocente.ToString();
+            sql = sql + " order by fecha desc ";
             return cDb.GetDatatable(sql);
         }
 

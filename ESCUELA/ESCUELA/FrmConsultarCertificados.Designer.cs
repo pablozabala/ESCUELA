@@ -41,12 +41,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dpFechaDesde = new System.Windows.Forms.DateTimePicker();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnEliminar);
             this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.txtCodDocente);
             this.groupBox1.Controls.Add(this.txtDocente);
@@ -77,7 +79,7 @@
             // txtCodDocente
             // 
             this.txtCodDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtCodDocente.Location = new System.Drawing.Point(591, 55);
+            this.txtCodDocente.Location = new System.Drawing.Point(613, 19);
             this.txtCodDocente.Name = "txtCodDocente";
             this.txtCodDocente.Size = new System.Drawing.Size(53, 26);
             this.txtCodDocente.TabIndex = 9;
@@ -161,6 +163,16 @@
             this.dpFechaDesde.Size = new System.Drawing.Size(159, 26);
             this.dpFechaDesde.TabIndex = 0;
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
+            this.BtnEliminar.Location = new System.Drawing.Point(572, 46);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(50, 34);
+            this.BtnEliminar.TabIndex = 11;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // FrmConsultarCertificados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.TextBox txtCodDocente;
         private System.Windows.Forms.TextBox txtDocente;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button BtnEliminar;
     }
 }

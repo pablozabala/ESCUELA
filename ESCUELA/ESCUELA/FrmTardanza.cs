@@ -70,9 +70,9 @@ namespace ESCUELA
             Int32? CodMotivo = Convert.ToInt32(cmbMotivo.SelectedValue);
             Int32 CodDocente = Convert.ToInt32(txtCodDocente.Text);
             DateTime Fecha = dpFecha.Value;
-
+            string Observacion = txtObservacion.Text;
             cTardanza tardanza = new cTardanza();
-            tardanza.Registrar(CodDocente, CodMotivo, Fecha);
+            tardanza.Registrar(CodDocente, CodMotivo, Fecha, Observacion);
             MessageBox.Show("Datos grabados correctamente");
             
         }
