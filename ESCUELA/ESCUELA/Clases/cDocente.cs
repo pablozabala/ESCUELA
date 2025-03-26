@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 namespace ESCUELA.Clases
 {
    public class cDocente
-    {
+    {  //clase de docente
        public DataTable GetDocentexDni(string NroDoc)
         {
             string sql = "select * from Docente ";
