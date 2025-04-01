@@ -61,6 +61,7 @@
     <Compile Include="Clases\cFalta.cs" />
     <Compile Include="Clases\cFunciones.cs" />
     <Compile Include="Clases\cIncidencia.cs" />
+    <Compile Include="Clases\cRangoHorario.cs" />
     <Compile Include="Clases\cTardanza.cs" />
     <Compile Include="cMateria.cs" />
     <Compile Include="FormBase.cs">
@@ -189,6 +190,12 @@
     <Compile Include="FrmRegistrarFaltas.Designer.cs">
       <DependentUpon>FrmRegistrarFaltas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistrarHorarioscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarHorarioscs.Designer.cs">
+      <DependentUpon>FrmRegistrarHorarioscs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistrarIncidente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarFaltas.resx">
       <DependentUpon>FrmRegistrarFaltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarHorarioscs.resx">
+      <DependentUpon>FrmRegistrarHorarioscs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarIncidente.resx">
       <DependentUpon>FrmRegistrarIncidente.cs</DependentUpon>

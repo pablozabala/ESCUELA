@@ -17,10 +17,10 @@ namespace ESCUELA
             Application.EnableVisualStyles(); 
             Application.SetCompatibleTextRenderingDefault(false);
              //  Application.Run(new Testcs());
-            Application.Run(new Principal());
-            //   Application.Run(new FrmRegistrarFaltas() );
-        //    Application.Run(new FrmConsultaFalta());
-         //   Application.Run(new FrmListadoDiarioFalta());
+           // Application.Run(new Principal());
+               Application.Run(new FrmRegistrarHorarioscs());
+            //    Application.Run(new FrmConsultaFalta());
+            //   Application.Run(new FrmListadoDiarioFalta());
         }
     }
 }
