@@ -11,7 +11,7 @@ using ESCUELA.Clases;
 
 namespace ESCUELA
 {
-    public partial class FrmRegistrarHorarioscs : FrmBase
+    public partial class FrmRegistrarHorarioscs : FormBase
     {
         DataTable tbHorario;
         public FrmRegistrarHorarioscs()
@@ -38,7 +38,7 @@ namespace ESCUELA
                 tbHorario = fun.AgregarFilas(tbHorario, Val);
             }
             Grilla.DataSource = tbHorario;
-            
+            fun.AnchoColumnas(Grilla, "10;15;15;15;15;15;15");
             
         }
 
@@ -114,5 +114,37 @@ namespace ESCUELA
                 fun.LlenarComboDatatable(cmbCurso, trdo, "Nombre", "CodCurso");
             }
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            int graba = 1;
+            int CodCurso = Convert.ToInt32(cmbCurso.SelectedValue);
+            cHorariocs horario = new cHorariocs();
+            int i = 0;
+            string Hora = "";
+            string Lunes = "", Martes = "";
+            string Miercoles = "", Jueves = "", Viernes = "";
+            int b = 0;
+            for(i =0;i< Grilla.Rows.Count -1;i++)
+            {
+                Hora = Grilla.Rows[i].Cells[0].Value.ToString(); 
+                Lunes = Grilla.Rows[i].Cells[2].Value.ToString();
+                Martes = Grilla.Rows[i].Cells[3].Value.ToString();
+                Miercoles = Grilla.Rows[i].Cells[4].Value.ToString();
+                Jueves = Grilla.Rows[i].Cells[5].Value.ToString();
+                Viernes = Grilla.Rows[i].Cells[6].Value.ToString();
+                if (graba ==1)
+                {
+                    horario.Insertar(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
+                    b = 1;
+                }
+            }
+            if (b==1)
+            {
+                MessageBox.Show("Datos grabados correctamente");
+            }
+        }
+
+
     }
 }

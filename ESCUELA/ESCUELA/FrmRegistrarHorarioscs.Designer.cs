@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarHorarioscs));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CMBtURNO = new System.Windows.Forms.ComboBox();
             this.cmbMateria = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodDocente = new System.Windows.Forms.TextBox();
@@ -39,15 +42,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.Grilla = new System.Windows.Forms.DataGridView();
-            this.CMBtURNO = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnGrabar);
             this.groupBox1.Controls.Add(this.cmbCurso);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.CMBtURNO);
@@ -61,10 +63,37 @@
             this.groupBox1.Controls.Add(this.Grilla);
             this.groupBox1.Location = new System.Drawing.Point(13, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(930, 488);
+            this.groupBox1.Size = new System.Drawing.Size(986, 488);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Location = new System.Drawing.Point(353, 34);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(103, 33);
+            this.cmbCurso.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Turno";
+            // 
+            // CMBtURNO
+            // 
+            this.CMBtURNO.FormattingEnabled = true;
+            this.CMBtURNO.Location = new System.Drawing.Point(120, 34);
+            this.CMBtURNO.Name = "CMBtURNO";
+            this.CMBtURNO.Size = new System.Drawing.Size(227, 33);
+            this.CMBtURNO.TabIndex = 18;
+            this.CMBtURNO.SelectedIndexChanged += new System.EventHandler(this.CMBtURNO_SelectedIndexChanged);
             // 
             // cmbMateria
             // 
@@ -123,7 +152,7 @@
             // 
             // btnAsignar
             // 
-            this.btnAsignar.Location = new System.Drawing.Point(639, 74);
+            this.btnAsignar.Location = new System.Drawing.Point(353, 73);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(107, 34);
             this.btnAsignar.TabIndex = 2;
@@ -138,41 +167,24 @@
             this.Grilla.Name = "Grilla";
             this.Grilla.RowHeadersWidth = 44;
             this.Grilla.RowTemplate.Height = 28;
-            this.Grilla.Size = new System.Drawing.Size(890, 336);
+            this.Grilla.Size = new System.Drawing.Size(947, 336);
             this.Grilla.TabIndex = 1;
             // 
-            // CMBtURNO
+            // btnGrabar
             // 
-            this.CMBtURNO.FormattingEnabled = true;
-            this.CMBtURNO.Location = new System.Drawing.Point(120, 34);
-            this.CMBtURNO.Name = "CMBtURNO";
-            this.CMBtURNO.Size = new System.Drawing.Size(227, 33);
-            this.CMBtURNO.TabIndex = 18;
-            this.CMBtURNO.SelectedIndexChanged += new System.EventHandler(this.CMBtURNO_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 25);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Turno";
-            // 
-            // cmbCurso
-            // 
-            this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(353, 34);
-            this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(103, 33);
-            this.cmbCurso.TabIndex = 20;
+            this.btnGrabar.Location = new System.Drawing.Point(466, 76);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(107, 34);
+            this.btnGrabar.TabIndex = 21;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // FrmRegistrarHorarioscs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 587);
+            this.ClientSize = new System.Drawing.Size(1011, 587);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmRegistrarHorarioscs";
@@ -200,5 +212,6 @@
         private System.Windows.Forms.ComboBox CMBtURNO;
         private System.Windows.Forms.ComboBox cmbCurso;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGrabar;
     }
 }
