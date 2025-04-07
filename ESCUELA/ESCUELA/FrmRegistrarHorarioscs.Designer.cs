@@ -28,38 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarHorarioscs));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Grilla = new System.Windows.Forms.DataGridView();
+            this.cmbMateria = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCodDocente = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
+            this.Grilla = new System.Windows.Forms.DataGridView();
+            this.CMBtURNO = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbCurso);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.CMBtURNO);
+            this.groupBox1.Controls.Add(this.cmbMateria);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtCodDocente);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.txtApellido);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnAsignar);
             this.groupBox1.Controls.Add(this.Grilla);
             this.groupBox1.Location = new System.Drawing.Point(13, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(805, 488);
+            this.groupBox1.Size = new System.Drawing.Size(930, 488);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
             // 
-            // Grilla
+            // cmbMateria
             // 
-            this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(19, 85);
-            this.Grilla.Name = "Grilla";
-            this.Grilla.RowHeadersWidth = 44;
-            this.Grilla.RowTemplate.Height = 28;
-            this.Grilla.Size = new System.Drawing.Size(764, 312);
-            this.Grilla.TabIndex = 1;
+            this.cmbMateria.FormattingEnabled = true;
+            this.cmbMateria.Location = new System.Drawing.Point(120, 76);
+            this.cmbMateria.Name = "cmbMateria";
+            this.cmbMateria.Size = new System.Drawing.Size(227, 33);
+            this.cmbMateria.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 84);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Materia";
+            // 
+            // txtCodDocente
+            // 
+            this.txtCodDocente.Location = new System.Drawing.Point(482, 27);
+            this.txtCodDocente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodDocente.Name = "txtCodDocente";
+            this.txtCodDocente.Size = new System.Drawing.Size(59, 30);
+            this.txtCodDocente.TabIndex = 15;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(854, 25);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(55, 42);
+            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(639, 27);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(194, 30);
+            this.txtApellido.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(549, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Apellido";
             // 
             // btnAsignar
             // 
-            this.btnAsignar.Location = new System.Drawing.Point(676, 29);
+            this.btnAsignar.Location = new System.Drawing.Point(639, 74);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(107, 34);
             this.btnAsignar.TabIndex = 2;
@@ -67,17 +131,55 @@
             this.btnAsignar.UseVisualStyleBackColor = true;
             this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
+            // Grilla
+            // 
+            this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grilla.Location = new System.Drawing.Point(19, 133);
+            this.Grilla.Name = "Grilla";
+            this.Grilla.RowHeadersWidth = 44;
+            this.Grilla.RowTemplate.Height = 28;
+            this.Grilla.Size = new System.Drawing.Size(890, 336);
+            this.Grilla.TabIndex = 1;
+            // 
+            // CMBtURNO
+            // 
+            this.CMBtURNO.FormattingEnabled = true;
+            this.CMBtURNO.Location = new System.Drawing.Point(120, 34);
+            this.CMBtURNO.Name = "CMBtURNO";
+            this.CMBtURNO.Size = new System.Drawing.Size(227, 33);
+            this.CMBtURNO.TabIndex = 18;
+            this.CMBtURNO.SelectedIndexChanged += new System.EventHandler(this.CMBtURNO_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Turno";
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Location = new System.Drawing.Point(353, 34);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(103, 33);
+            this.cmbCurso.TabIndex = 20;
+            // 
             // FrmRegistrarHorarioscs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 587);
+            this.ClientSize = new System.Drawing.Size(955, 587);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmRegistrarHorarioscs";
             this.Text = "FrmRegistrarHorarioscs";
             this.Load += new System.EventHandler(this.FrmRegistrarHorarioscs_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).EndInit();
             this.ResumeLayout(false);
 
@@ -89,5 +191,14 @@
         private System.Windows.Forms.DataGridView Grilla;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnAsignar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCodDocente;
+        private System.Windows.Forms.ComboBox cmbMateria;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CMBtURNO;
+        private System.Windows.Forms.ComboBox cmbCurso;
+        private System.Windows.Forms.Label label3;
     }
 }
