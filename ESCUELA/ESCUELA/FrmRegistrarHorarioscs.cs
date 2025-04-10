@@ -54,7 +54,7 @@ namespace ESCUELA
             cMateria mat = new cMateria();
             int CodMateria = Convert.ToInt32(cmbMateria.SelectedValue);
             string Materia = mat.GetMaeriaxCodigo(CodMateria);
-            string DocMateria = Materia + "\n " + txtApellido.Text;
+            string DocMateria = Materia + " " + txtApellido.Text;
             int fila = Grilla.CurrentRow.Index;
             int col = Grilla.CurrentCell.ColumnIndex;
             Grilla.Rows[fila].Cells[col].Value = DocMateria;   
@@ -117,9 +117,11 @@ namespace ESCUELA
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            int graba = 1;
+            int graba = 0;
             int CodCurso = Convert.ToInt32(cmbCurso.SelectedValue);
             cHorariocs horario = new cHorariocs();
+            Boolean Tiene = GetHorarioxCodCurso(CodCurso);
+            
             int i = 0;
             string Hora = "";
             string Lunes = "", Martes = "";
@@ -133,10 +135,14 @@ namespace ESCUELA
                 Miercoles = Grilla.Rows[i].Cells[4].Value.ToString();
                 Jueves = Grilla.Rows[i].Cells[5].Value.ToString();
                 Viernes = Grilla.Rows[i].Cells[6].Value.ToString();
-                if (graba ==1)
+                if (Tiene ==false)
                 {
                     horario.Insertar(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
                     b = 1;
+                }
+                else
+                {
+                    horario.ModificarHorario(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
                 }
             }
             if (b==1)
@@ -145,6 +151,54 @@ namespace ESCUELA
             }
         }
 
+        private Boolean GetHorarioxCodCurso(int CodCurso)
+        {
+            Boolean Tiene = false;
+            cHorariocs horario = new cHorariocs();
+            DataTable trdo = horario.GetHorarioxCodCurso(CodCurso);
+            if (trdo.Rows.Count >0 )
+            {
+                if (trdo.Rows[0]["CodCurso"].ToString ()!="")
+                    {
+                    Tiene = true;
+                }
+            }
+            return Tiene;
 
+        }
+
+        public void BuscarHorario(int CodCurso)
+        {
+            string Hora = "";
+            string Lunes = "";
+            cHorariocs horario = new Clases.cHorariocs();
+            DataTable trdo = horario.GetHorarioxCodCurso(CodCurso);
+            for (int i = 0; i < trdo.Rows.Count; i++)
+            {
+                Hora = trdo.Rows[i]["Hora"].ToString();
+                Lunes = trdo.Rows[i]["Lunes"].ToString();
+                UbicarHorario(Hora, Lunes);
+            }
+        }
+
+        public void UbicarHorario (string Hora, string Lunes)
+        {
+            for (int i = 0; i < Grilla.Rows.Count -1 ; i++)
+            {
+                if (Grilla.Rows[i].Cells[0].Value.ToString ()== Hora)
+                {
+                    Grilla.Rows[i].Cells["Lunes"].Value = Lunes;  
+                }
+            }
+        }
+
+        private void cmbCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbCurso.SelectedIndex>0)
+            {
+                int CodCurso = Convert.ToInt32(cmbCurso.SelectedValue);
+                BuscarHorario(CodCurso);
+            }
+        }
     }
 }

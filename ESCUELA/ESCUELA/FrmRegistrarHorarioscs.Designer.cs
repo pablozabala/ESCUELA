@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarHorarioscs));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CMBtURNO = new System.Windows.Forms.ComboBox();
@@ -42,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.Grilla = new System.Windows.Forms.DataGridView();
-            this.btnGrabar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
             // 
+            // btnGrabar
+            // 
+            this.btnGrabar.Location = new System.Drawing.Point(466, 73);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(107, 34);
+            this.btnGrabar.TabIndex = 21;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
+            // 
             // cmbCurso
             // 
             this.cmbCurso.FormattingEnabled = true;
@@ -75,6 +85,7 @@
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(103, 33);
             this.cmbCurso.TabIndex = 20;
+            this.cmbCurso.SelectedIndexChanged += new System.EventHandler(this.cmbCurso_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -169,16 +180,6 @@
             this.Grilla.RowTemplate.Height = 28;
             this.Grilla.Size = new System.Drawing.Size(947, 336);
             this.Grilla.TabIndex = 1;
-            // 
-            // btnGrabar
-            // 
-            this.btnGrabar.Location = new System.Drawing.Point(466, 76);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(107, 34);
-            this.btnGrabar.TabIndex = 21;
-            this.btnGrabar.Text = "Grabar";
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // FrmRegistrarHorarioscs
             // 
