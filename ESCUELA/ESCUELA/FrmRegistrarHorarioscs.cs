@@ -69,6 +69,13 @@ namespace ESCUELA
             string Viernes = Grilla.CurrentRow.Cells[6].Value.ToString();
             Horario.ModificarHorario(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
             MessageBox.Show("Datos grabados correctamente ");
+            //falta grabar el horario del curso x docente
+        }
+
+        private void GrabarHorarioxCurso(int CodDocente,int CodCurso, string Hora)
+        {
+            //primero busco que no exista
+            cHorarioDocentecs horario = new cHorarioDocentecs();
 
         }
 

@@ -62,6 +62,7 @@
     <Compile Include="Clases\cFalta.cs" />
     <Compile Include="Clases\cFunciones.cs" />
     <Compile Include="Clases\cHorariocs.cs" />
+    <Compile Include="Clases\cHorarioDocentecs.cs" />
     <Compile Include="Clases\cIncidencia.cs" />
     <Compile Include="Clases\cRangoHorario.cs" />
     <Compile Include="Clases\cTardanza.cs" />
