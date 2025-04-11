@@ -26,6 +26,17 @@ namespace ESCUELA.Clases
             cDb.Grabar(sql);
         }
 
+        public void InsertarSoloHora(Int32 CodCurso, string Hora)
+        {
+            string sql = "Insert into Horario(";
+            sql = sql + "CodCurso,Hora)";
+            sql = sql + " values(";
+            sql = sql + CodCurso.ToString();
+            sql = sql + "," + "'" + Hora + "'";
+            sql = sql + ")";
+            cDb.Grabar(sql);
+        }
+
         public DataTable GetHorarioxCodCurso(int CodCurso)
         {
             string sql = "select * ";

@@ -51,14 +51,41 @@ namespace ESCUELA
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
+            cHorariocs Horario = new cHorariocs();
             cMateria mat = new cMateria();
+            int CodCurso = Convert.ToInt32(cmbCurso.SelectedValue);
             int CodMateria = Convert.ToInt32(cmbMateria.SelectedValue);
             string Materia = mat.GetMaeriaxCodigo(CodMateria);
             string DocMateria = Materia + " " + txtApellido.Text;
             int fila = Grilla.CurrentRow.Index;
             int col = Grilla.CurrentCell.ColumnIndex;
-            Grilla.Rows[fila].Cells[col].Value = DocMateria;   
+            Grilla.Rows[fila].Cells[col].Value = DocMateria;
+            GrabarSoloHorario(CodCurso);
+            string Hora = Grilla.CurrentRow.Cells[0].Value.ToString(); 
+            string Lunes = Grilla.CurrentRow.Cells[2].Value.ToString();
+            string Martes = Grilla.CurrentRow.Cells[3].Value.ToString();
+            string Miercoles = Grilla.CurrentRow.Cells[4].Value.ToString();
+            string Jueves = Grilla.CurrentRow.Cells[5].Value.ToString();
+            string Viernes = Grilla.CurrentRow.Cells[6].Value.ToString();
+            Horario.ModificarHorario(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
+            MessageBox.Show("Datos grabados correctamente ");
 
+        }
+
+        public Boolean Validar()
+        {
+            Boolean op = true;
+            if (cmbCurso.SelectedIndex<1)
+            {
+                MessageBox.Show("Debe seleccionar un curso ");
+                op = false;
+            }
+            if (txtCodDocente.Text =="")
+            {
+                MessageBox.Show("Debe seleccionar un docente ");
+                op = false;
+            }
+            return op;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -198,6 +225,22 @@ namespace ESCUELA
             {
                 int CodCurso = Convert.ToInt32(cmbCurso.SelectedValue);
                 BuscarHorario(CodCurso);
+            }
+        }
+
+        private void GrabarSoloHorario(int CodCurso)
+        {
+            cHorariocs horario = new cHorariocs();
+            string Hora = "";
+            Boolean Tiene = GetHorarioxCodCurso(CodCurso);
+            if (Tiene==true)
+            {
+                return;
+            }
+            for (int i = 0; i < Grilla.Rows.Count - 1; i++)
+            {
+                Hora = Grilla.Rows[i].Cells[0].Value.ToString();
+                horario.InsertarSoloHora(CodCurso, Hora);
             }
         }
     }
