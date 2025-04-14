@@ -51,10 +51,18 @@ namespace ESCUELA
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
+            if (Validar ()==false)
+            {
+                return;
+            }
+            cHorarioDocentecs horarioDocente = new Clases.cHorarioDocentecs();
             cHorariocs Horario = new cHorariocs();
             cMateria mat = new cMateria();
             int CodCurso = Convert.ToInt32(cmbCurso.SelectedValue);
             int CodMateria = Convert.ToInt32(cmbMateria.SelectedValue);
+            int CodTurno = Convert.ToInt32(CMBtURNO.SelectedValue);
+            int CodDocente = Convert.ToInt32(txtCodDocente.Text);
+
             string Materia = mat.GetMaeriaxCodigo(CodMateria);
             string DocMateria = Materia + " " + txtApellido.Text;
             int fila = Grilla.CurrentRow.Index;
@@ -67,15 +75,33 @@ namespace ESCUELA
             string Miercoles = Grilla.CurrentRow.Cells[4].Value.ToString();
             string Jueves = Grilla.CurrentRow.Cells[5].Value.ToString();
             string Viernes = Grilla.CurrentRow.Cells[6].Value.ToString();
+            string Curso = ""; 
             Horario.ModificarHorario(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
+            GrabarHorarioxCurso(CodDocente, CodCurso, Hora, Curso, CodTurno);
             MessageBox.Show("Datos grabados correctamente ");
             //falta grabar el horario del curso x docente
         }
 
-        private void GrabarHorarioxCurso(int CodDocente,int CodCurso, string Hora)
+        private void GrabarHorarioxCurso(int CodDocente,int CodCurso,string Hora, string Curso, int CodTurno)
         {
             //primero busco que no exista
+            int b = 0;
             cHorarioDocentecs horario = new cHorarioDocentecs();
+            DataTable trdo = horario.GetHorarioxCodDocente(CodDocente, Hora, CodCurso);
+            if (trdo.Rows.Count >0)
+            {
+                if (trdo.Rows[0]["CodDocente"].ToString ()!="")
+                {
+                    b = 1;
+                    horario.Modificar(CodDocente, CodCurso, Curso, Hora);
+                    //modifica
+                }
+            }
+            if (b==0)
+            {
+                //inserta
+                horario.Insertar(CodDocente, CodCurso, Curso, Hora, CodTurno);
+            }
 
         }
 
@@ -205,23 +231,36 @@ namespace ESCUELA
         {
             string Hora = "";
             string Lunes = "";
+            string Martes = "";
+            string Miercoles = "";
+            string Jueves = "";
+            string Viernes = "";
             cHorariocs horario = new Clases.cHorariocs();
             DataTable trdo = horario.GetHorarioxCodCurso(CodCurso);
             for (int i = 0; i < trdo.Rows.Count; i++)
             {
                 Hora = trdo.Rows[i]["Hora"].ToString();
                 Lunes = trdo.Rows[i]["Lunes"].ToString();
-                UbicarHorario(Hora, Lunes);
+                Martes = trdo.Rows[i]["Martes"].ToString();                
+                Miercoles = trdo.Rows[i]["Miercoles"].ToString();
+                Jueves = trdo.Rows[i]["Jueves"].ToString();
+                Viernes = trdo.Rows[i]["Viernes"].ToString();
+
+                UbicarHorario(Hora, Lunes,Martes ,Miercoles, Jueves, Viernes);
             }
         }
 
-        public void UbicarHorario (string Hora, string Lunes)
+        public void UbicarHorario (string Hora, string Lunes,string Martes, string Miercoles, string Jueves, string Viernes)
         {
             for (int i = 0; i < Grilla.Rows.Count -1 ; i++)
             {
                 if (Grilla.Rows[i].Cells[0].Value.ToString ()== Hora)
                 {
-                    Grilla.Rows[i].Cells["Lunes"].Value = Lunes;  
+                    Grilla.Rows[i].Cells["Lunes"].Value = Lunes;
+                    Grilla.Rows[i].Cells["Martes"].Value = Martes;
+                    Grilla.Rows[i].Cells["Miercoles"].Value = Miercoles;
+                    Grilla.Rows[i].Cells["Jueves"].Value = Jueves;
+                    Grilla.Rows[i].Cells["Viernes"].Value = Viernes;
                 }
             }
         }
