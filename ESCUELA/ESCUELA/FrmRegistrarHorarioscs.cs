@@ -75,11 +75,19 @@ namespace ESCUELA
             string Miercoles = Grilla.CurrentRow.Cells[4].Value.ToString();
             string Jueves = Grilla.CurrentRow.Cells[5].Value.ToString();
             string Viernes = Grilla.CurrentRow.Cells[6].Value.ToString();
-            string Curso = ""; 
+            string Curso = "";
+            Curso = GetCursoxCodigo(CodCurso);
             Horario.ModificarHorario(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
             GrabarHorarioxCurso(CodDocente, CodCurso, Hora, Curso, CodTurno);
             MessageBox.Show("Datos grabados correctamente ");
             //falta grabar el horario del curso x docente
+        }
+
+        public String GetCursoxCodigo(int CodCurso)
+        {
+            cCurso Curso = new Clases.cCurso();
+            string Nombre = Curso.GetNombre(CodCurso);
+            return Nombre;
         }
 
         private void GrabarHorarioxCurso(int CodDocente,int CodCurso,string Hora, string Curso, int CodTurno)

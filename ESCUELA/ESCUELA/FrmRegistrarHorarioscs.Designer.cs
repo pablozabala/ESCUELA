@@ -43,12 +43,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.Grilla = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnGrabar);
             this.groupBox1.Controls.Add(this.cmbCurso);
             this.groupBox1.Controls.Add(this.label3);
@@ -135,10 +137,10 @@
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(854, 25);
+            this.btnBuscar.Location = new System.Drawing.Point(841, 23);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(55, 42);
+            this.btnBuscar.Size = new System.Drawing.Size(45, 34);
             this.btnBuscar.TabIndex = 14;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -181,6 +183,16 @@
             this.Grilla.Size = new System.Drawing.Size(947, 336);
             this.Grilla.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(894, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 34);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FrmRegistrarHorarioscs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.ComboBox cmbCurso;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button button1;
     }
 }

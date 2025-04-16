@@ -139,6 +139,12 @@
     <Compile Include="FrmCopia.Designer.cs">
       <DependentUpon>FrmCopia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHorarioDicente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHorarioDicente.Designer.cs">
+      <DependentUpon>FrmHorarioDicente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInscripcionConvocatoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCopia.resx">
       <DependentUpon>FrmCopia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHorarioDicente.resx">
+      <DependentUpon>FrmHorarioDicente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInscripcionConvocatoria.resx">
       <DependentUpon>FrmInscripcionConvocatoria.cs</DependentUpon>
