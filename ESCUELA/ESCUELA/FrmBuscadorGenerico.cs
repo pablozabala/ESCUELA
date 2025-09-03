@@ -76,7 +76,7 @@ namespace ESCUELA
         private void FrmBuscadorGenerico_Load(object sender, EventArgs e)
         {
             CargarCombo();
-            FormatoColumnas();
+           // FormatoColumnas();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

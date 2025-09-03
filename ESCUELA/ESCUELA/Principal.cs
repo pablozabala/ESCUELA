@@ -213,5 +213,11 @@ namespace ESCUELA
             FrmListadoIncidencia frm = new ESCUELA.FrmListadoIncidencia();
             frm.Show();
         }
+
+        private void registrarHorarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarHorarioscs frm = new ESCUELA.FrmRegistrarHorarioscs();
+            frm.Show();
+        }
     }
 }

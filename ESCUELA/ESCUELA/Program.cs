@@ -18,8 +18,7 @@ namespace ESCUELA
             Application.SetCompatibleTextRenderingDefault(false);
              //  Application.Run(new Testcs());
             Application.Run(new Principal());
-           //    Application.Run(new FrmRegistrarHorarioscs());
-            
+           //    Application.Run(new FrmRegistrarHorarioscs());            
             //   Application.Run(new FrmListadoDiarioFalta());
         }
     }

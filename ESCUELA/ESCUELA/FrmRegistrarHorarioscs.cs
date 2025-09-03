@@ -121,6 +121,13 @@ namespace ESCUELA
                 MessageBox.Show("Debe seleccionar un curso ");
                 op = false;
             }
+
+            if (cmbMateria.SelectedIndex<1)
+            {
+                MessageBox.Show("Debe seleccionar la materia ");
+                op = false;
+            }
+
             if (txtCodDocente.Text =="")
             {
                 MessageBox.Show("Debe seleccionar un docente ");
@@ -211,6 +218,7 @@ namespace ESCUELA
                 else
                 {
                     horario.ModificarHorario(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
+                    b = 1;
                 }
             }
             if (b==1)
