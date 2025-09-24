@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarHorarioscs));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.Grilla = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
@@ -63,12 +63,22 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnAsignar);
             this.groupBox1.Controls.Add(this.Grilla);
-            this.groupBox1.Location = new System.Drawing.Point(13, 27);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(986, 488);
+            this.groupBox1.Size = new System.Drawing.Size(1047, 565);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horarios";
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(894, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 34);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnGrabar
             // 
@@ -92,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 34);
+            this.label3.Location = new System.Drawing.Point(14, 34);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 25);
@@ -119,7 +129,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 84);
+            this.label1.Location = new System.Drawing.Point(24, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 25);
@@ -176,32 +186,22 @@
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(19, 133);
+            this.Grilla.Location = new System.Drawing.Point(19, 127);
             this.Grilla.Name = "Grilla";
             this.Grilla.RowHeadersWidth = 44;
             this.Grilla.RowTemplate.Height = 28;
-            this.Grilla.Size = new System.Drawing.Size(947, 336);
+            this.Grilla.Size = new System.Drawing.Size(1000, 411);
             this.Grilla.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(894, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 34);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmRegistrarHorarioscs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 587);
+            this.ClientSize = new System.Drawing.Size(1064, 579);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmRegistrarHorarioscs";
-            this.Text = "FrmRegistrarHorarioscs";
+            this.Text = "Registrar Horario";
             this.Load += new System.EventHandler(this.FrmRegistrarHorarioscs_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

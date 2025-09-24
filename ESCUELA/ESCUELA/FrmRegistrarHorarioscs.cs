@@ -19,13 +19,13 @@ namespace ESCUELA
             InitializeComponent();
         }
 
-        private void ArmarHorario()
+        private void ArmarHorario(Int32 CodTurno)
         {            
             cFunciones fun = new Clases.cFunciones();
             string col = "Hora;Nombre;Lunes;Martes;Miercoles;Jueves;Viernes";
             tbHorario = fun.CrearTabla(col);
             cRangoHorario rango = new cRangoHorario();
-            DataTable tb = rango.GetRangoHorario(1);
+            DataTable tb = rango.GetRangoHorario(CodTurno);
             string Hora = "";
             string Nombre = "";
             string Val = "";
@@ -44,7 +44,7 @@ namespace ESCUELA
 
         private void FrmRegistrarHorarioscs_Load(object sender, EventArgs e)
         {
-            ArmarHorario();
+           // ArmarHorario();
             CargarTurno();
             CargarMateria();
         }
@@ -187,6 +187,7 @@ namespace ESCUELA
                 int CodTurno = Convert.ToInt32(CMBtURNO.SelectedValue);
                 DataTable trdo = curso.GetCursoxTurno(CodTurno);
                 fun.LlenarComboDatatable(cmbCurso, trdo, "Nombre", "CodCurso");
+                ArmarHorario(CodTurno);
             }
         }
 
@@ -251,6 +252,8 @@ namespace ESCUELA
             string Miercoles = "";
             string Jueves = "";
             string Viernes = "";
+            int CodTurno = Convert.ToInt32(CMBtURNO.SelectedValue);
+            ArmarHorario(CodTurno);            
             cHorariocs horario = new Clases.cHorariocs();
             DataTable trdo = horario.GetHorarioxCodCurso(CodCurso);
             for (int i = 0; i < trdo.Rows.Count; i++)

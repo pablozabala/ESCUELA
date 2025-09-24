@@ -56,9 +56,11 @@
             this.groupBox1.Controls.Add(this.CmbConvocatoria);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(23, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 191);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(710, 247);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulario de Convocatoria";
@@ -66,9 +68,10 @@
             // 
             // btnFinalizar
             // 
-            this.btnFinalizar.Location = new System.Drawing.Point(358, 125);
+            this.btnFinalizar.Location = new System.Drawing.Point(457, 172);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(109, 31);
+            this.btnFinalizar.Size = new System.Drawing.Size(126, 48);
             this.btnFinalizar.TabIndex = 9;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
@@ -77,16 +80,18 @@
             // txtIdConvocatoria
             // 
             this.txtIdConvocatoria.Enabled = false;
-            this.txtIdConvocatoria.Location = new System.Drawing.Point(371, 37);
+            this.txtIdConvocatoria.Location = new System.Drawing.Point(537, 47);
+            this.txtIdConvocatoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdConvocatoria.Name = "txtIdConvocatoria";
-            this.txtIdConvocatoria.Size = new System.Drawing.Size(63, 23);
+            this.txtIdConvocatoria.Size = new System.Drawing.Size(92, 30);
             this.txtIdConvocatoria.TabIndex = 8;
             // 
             // btnPuntaje
             // 
-            this.btnPuntaje.Location = new System.Drawing.Point(244, 125);
+            this.btnPuntaje.Location = new System.Drawing.Point(326, 172);
+            this.btnPuntaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPuntaje.Name = "btnPuntaje";
-            this.btnPuntaje.Size = new System.Drawing.Size(109, 31);
+            this.btnPuntaje.Size = new System.Drawing.Size(123, 48);
             this.btnPuntaje.TabIndex = 7;
             this.btnPuntaje.Text = "Puntaje";
             this.btnPuntaje.UseVisualStyleBackColor = true;
@@ -96,9 +101,10 @@
             // 
             this.btnGrabar.BackColor = System.Drawing.Color.White;
             this.btnGrabar.ForeColor = System.Drawing.Color.Black;
-            this.btnGrabar.Location = new System.Drawing.Point(128, 125);
+            this.btnGrabar.Location = new System.Drawing.Point(194, 172);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(109, 31);
+            this.btnGrabar.Size = new System.Drawing.Size(124, 48);
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
@@ -106,35 +112,39 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(134, 96);
+            this.txtDni.Location = new System.Drawing.Point(201, 132);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(103, 23);
+            this.txtDni.Size = new System.Drawing.Size(152, 30);
             this.txtDni.TabIndex = 5;
             this.txtDni.TextChanged += new System.EventHandler(this.txtDni_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 96);
+            this.label3.Location = new System.Drawing.Point(9, 132);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 17);
+            this.label3.Size = new System.Drawing.Size(44, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Dni";
             // 
             // txtDocente
             // 
             this.txtDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocente.Location = new System.Drawing.Point(134, 67);
+            this.txtDocente.Location = new System.Drawing.Point(201, 87);
+            this.txtDocente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDocente.Name = "txtDocente";
-            this.txtDocente.Size = new System.Drawing.Size(204, 26);
+            this.txtDocente.Size = new System.Drawing.Size(304, 35);
             this.txtDocente.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 67);
+            this.label2.Location = new System.Drawing.Point(9, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Docente";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -143,37 +153,40 @@
             // 
             this.CmbConvocatoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbConvocatoria.FormattingEnabled = true;
-            this.CmbConvocatoria.Location = new System.Drawing.Point(134, 37);
+            this.CmbConvocatoria.Location = new System.Drawing.Point(201, 44);
+            this.CmbConvocatoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmbConvocatoria.Name = "CmbConvocatoria";
-            this.CmbConvocatoria.Size = new System.Drawing.Size(219, 24);
+            this.CmbConvocatoria.Size = new System.Drawing.Size(326, 33);
             this.CmbConvocatoria.TabIndex = 1;
             this.CmbConvocatoria.SelectedIndexChanged += new System.EventHandler(this.CmbConvocatoria_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 37);
+            this.label1.Location = new System.Drawing.Point(8, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 17);
+            this.label1.Size = new System.Drawing.Size(140, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Convocatoria";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 273);
+            this.textBox1.Location = new System.Drawing.Point(12, 427);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(8, 23);
+            this.textBox1.Size = new System.Drawing.Size(10, 30);
             this.textBox1.TabIndex = 1;
             // 
             // FrmInscripcionConvocatoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 214);
+            this.ClientSize = new System.Drawing.Size(746, 277);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.Name = "FrmInscripcionConvocatoria";
             this.Text = "Listado de convocatorias vigentes";
             this.Load += new System.EventHandler(this.FrmInscripcionConvocatoria_Load);

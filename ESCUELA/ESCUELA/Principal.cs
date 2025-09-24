@@ -121,8 +121,7 @@ namespace ESCUELA
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            
-
+           
         }
 
         private void toolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -217,6 +216,12 @@ namespace ESCUELA
         private void registrarHorarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRegistrarHorarioscs frm = new ESCUELA.FrmRegistrarHorarioscs();
+            frm.Show();
+        }
+
+        private void horarioDeDocentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHorarioDocente1 frm = new frmHorarioDocente1();
             frm.Show();
         }
     }

@@ -145,6 +145,12 @@
     <Compile Include="FrmHorarioDicente.Designer.cs">
       <DependentUpon>FrmHorarioDicente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHorarioDocente1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHorarioDocente1.Designer.cs">
+      <DependentUpon>frmHorarioDocente1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInscripcionConvocatoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,12 @@
     </Compile>
     <Compile Include="FrmListadoIncidencia.Designer.cs">
       <DependentUpon>FrmListadoIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMateria.Designer.cs">
+      <DependentUpon>FrmMateria.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrueba.cs">
       <SubType>Form</SubType>
@@ -277,6 +289,9 @@
     <EmbeddedResource Include="FrmHorarioDicente.resx">
       <DependentUpon>FrmHorarioDicente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHorarioDocente1.resx">
+      <DependentUpon>frmHorarioDocente1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInscripcionConvocatoria.resx">
       <DependentUpon>FrmInscripcionConvocatoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListadoIncidencia.resx">
       <DependentUpon>FrmListadoIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMateria.resx">
+      <DependentUpon>FrmMateria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>

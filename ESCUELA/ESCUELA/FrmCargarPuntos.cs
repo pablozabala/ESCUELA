@@ -11,7 +11,7 @@ using ESCUELA.Clases;
 
 namespace ESCUELA
 {
-    public partial class FrmCargarPuntos : FrmBase
+    public partial class FrmCargarPuntos : FormBase
     {
         public FrmCargarPuntos()
         {

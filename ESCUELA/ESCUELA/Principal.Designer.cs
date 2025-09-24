@@ -53,6 +53,8 @@
             this.ausenciasRetrasoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarHorarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.BTNdOCENTES = new System.Windows.Forms.ToolStripButton();
@@ -66,8 +68,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.horarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarHorarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horarioDeDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -265,6 +266,22 @@
             this.consultasToolStripMenuItem.Text = "Consultas";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
+            // horarioToolStripMenuItem
+            // 
+            this.horarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarHorarioToolStripMenuItem,
+            this.horarioDeDocentesToolStripMenuItem});
+            this.horarioToolStripMenuItem.Name = "horarioToolStripMenuItem";
+            this.horarioToolStripMenuItem.Size = new System.Drawing.Size(76, 28);
+            this.horarioToolStripMenuItem.Text = "Horario";
+            // 
+            // registrarHorarioToolStripMenuItem
+            // 
+            this.registrarHorarioToolStripMenuItem.Name = "registrarHorarioToolStripMenuItem";
+            this.registrarHorarioToolStripMenuItem.Size = new System.Drawing.Size(244, 30);
+            this.registrarHorarioToolStripMenuItem.Text = "Registrar Horario";
+            this.registrarHorarioToolStripMenuItem.Click += new System.EventHandler(this.registrarHorarioToolStripMenuItem_Click);
+            // 
             // toolStrip
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
@@ -380,25 +397,18 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(61, 21);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // horarioToolStripMenuItem
+            // horarioDeDocentesToolStripMenuItem
             // 
-            this.horarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarHorarioToolStripMenuItem});
-            this.horarioToolStripMenuItem.Name = "horarioToolStripMenuItem";
-            this.horarioToolStripMenuItem.Size = new System.Drawing.Size(76, 28);
-            this.horarioToolStripMenuItem.Text = "Horario";
-            // 
-            // registrarHorarioToolStripMenuItem
-            // 
-            this.registrarHorarioToolStripMenuItem.Name = "registrarHorarioToolStripMenuItem";
-            this.registrarHorarioToolStripMenuItem.Size = new System.Drawing.Size(219, 30);
-            this.registrarHorarioToolStripMenuItem.Text = "Registrar Horario";
-            this.registrarHorarioToolStripMenuItem.Click += new System.EventHandler(this.registrarHorarioToolStripMenuItem_Click);
+            this.horarioDeDocentesToolStripMenuItem.Name = "horarioDeDocentesToolStripMenuItem";
+            this.horarioDeDocentesToolStripMenuItem.Size = new System.Drawing.Size(244, 30);
+            this.horarioDeDocentesToolStripMenuItem.Text = "Horario de Docentes";
+            this.horarioDeDocentesToolStripMenuItem.Click += new System.EventHandler(this.horarioDeDocentesToolStripMenuItem_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(948, 698);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
@@ -461,6 +471,7 @@
         private System.Windows.Forms.ToolStripMenuItem incidenciasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem horarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarHorarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horarioDeDocentesToolStripMenuItem;
     }
 }
 

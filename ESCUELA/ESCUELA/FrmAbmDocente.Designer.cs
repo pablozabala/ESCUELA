@@ -29,16 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmDocente));
-            this.BarraBotones = new System.Windows.Forms.ToolStrip();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnAceptar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnAbrir = new System.Windows.Forms.ToolStripButton();
-            this.btnIGregarColor = new System.Windows.Forms.ToolStripButton();
-            this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.Grupo = new System.Windows.Forms.GroupBox();
+            this.chk_Activo = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,10 +42,164 @@
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txtCodDocente = new System.Windows.Forms.TextBox();
-            this.chk_Activo = new System.Windows.Forms.CheckBox();
-            this.BarraBotones.SuspendLayout();
+            this.BarraBotones = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnAceptar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnAbrir = new System.Windows.Forms.ToolStripButton();
+            this.btnIGregarColor = new System.Windows.Forms.ToolStripButton();
+            this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.Grupo.SuspendLayout();
+            this.BarraBotones.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Grupo
+            // 
+            this.Grupo.Controls.Add(this.chk_Activo);
+            this.Grupo.Controls.Add(this.label3);
+            this.Grupo.Controls.Add(this.label2);
+            this.Grupo.Controls.Add(this.label1);
+            this.Grupo.Controls.Add(this.label4);
+            this.Grupo.Controls.Add(this.label6);
+            this.Grupo.Controls.Add(this.txt_Celular);
+            this.Grupo.Controls.Add(this.txt_NroDoc);
+            this.Grupo.Controls.Add(this.txt_Email);
+            this.Grupo.Controls.Add(this.txt_Nombre);
+            this.Grupo.Controls.Add(this.txt_Apellido);
+            this.Grupo.Controls.Add(this.txtCodDocente);
+            this.Grupo.ForeColor = System.Drawing.Color.Black;
+            this.Grupo.Location = new System.Drawing.Point(17, 44);
+            this.Grupo.Margin = new System.Windows.Forms.Padding(5);
+            this.Grupo.Name = "Grupo";
+            this.Grupo.Padding = new System.Windows.Forms.Padding(5);
+            this.Grupo.Size = new System.Drawing.Size(670, 290);
+            this.Grupo.TabIndex = 21;
+            this.Grupo.TabStop = false;
+            this.Grupo.Text = "Datos del Docente";
+            // 
+            // chk_Activo
+            // 
+            this.chk_Activo.AutoSize = true;
+            this.chk_Activo.Location = new System.Drawing.Point(121, 251);
+            this.chk_Activo.Margin = new System.Windows.Forms.Padding(4);
+            this.chk_Activo.Name = "chk_Activo";
+            this.chk_Activo.Size = new System.Drawing.Size(91, 29);
+            this.chk_Activo.TabIndex = 16;
+            this.chk_Activo.Text = "Activo";
+            this.chk_Activo.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Location = new System.Drawing.Point(25, 211);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 25);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Celular";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Enabled = false;
+            this.label2.Location = new System.Drawing.Point(29, 175);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 25);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Mail";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Enabled = false;
+            this.label1.Location = new System.Drawing.Point(25, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Apellido";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.Location = new System.Drawing.Point(25, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 25);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Nombre";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Enabled = false;
+            this.label6.Location = new System.Drawing.Point(25, 49);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nro Doc";
+            // 
+            // txt_Celular
+            // 
+            this.txt_Celular.Location = new System.Drawing.Point(121, 211);
+            this.txt_Celular.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Celular.Multiline = true;
+            this.txt_Celular.Name = "txt_Celular";
+            this.txt_Celular.Size = new System.Drawing.Size(508, 29);
+            this.txt_Celular.TabIndex = 9;
+            // 
+            // txt_NroDoc
+            // 
+            this.txt_NroDoc.Location = new System.Drawing.Point(121, 49);
+            this.txt_NroDoc.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_NroDoc.Multiline = true;
+            this.txt_NroDoc.Name = "txt_NroDoc";
+            this.txt_NroDoc.Size = new System.Drawing.Size(190, 29);
+            this.txt_NroDoc.TabIndex = 7;
+            this.txt_NroDoc.TextChanged += new System.EventHandler(this.txt_NroDoc_TextChanged);
+            // 
+            // txt_Email
+            // 
+            this.txt_Email.Location = new System.Drawing.Point(121, 170);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Email.Multiline = true;
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(508, 29);
+            this.txt_Email.TabIndex = 5;
+            // 
+            // txt_Nombre
+            // 
+            this.txt_Nombre.Location = new System.Drawing.Point(121, 130);
+            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Nombre.Multiline = true;
+            this.txt_Nombre.Name = "txt_Nombre";
+            this.txt_Nombre.Size = new System.Drawing.Size(508, 29);
+            this.txt_Nombre.TabIndex = 3;
+            // 
+            // txt_Apellido
+            // 
+            this.txt_Apellido.Location = new System.Drawing.Point(121, 89);
+            this.txt_Apellido.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_Apellido.Multiline = true;
+            this.txt_Apellido.Name = "txt_Apellido";
+            this.txt_Apellido.Size = new System.Drawing.Size(508, 29);
+            this.txt_Apellido.TabIndex = 2;
+            // 
+            // txtCodDocente
+            // 
+            this.txtCodDocente.Location = new System.Drawing.Point(337, 49);
+            this.txtCodDocente.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCodDocente.Multiline = true;
+            this.txtCodDocente.Name = "txtCodDocente";
+            this.txtCodDocente.Size = new System.Drawing.Size(148, 29);
+            this.txtCodDocente.TabIndex = 0;
+            this.txtCodDocente.Visible = false;
             // 
             // BarraBotones
             // 
@@ -69,7 +215,7 @@
             this.btnSalir});
             this.BarraBotones.Location = new System.Drawing.Point(0, 0);
             this.BarraBotones.Name = "BarraBotones";
-            this.BarraBotones.Size = new System.Drawing.Size(584, 39);
+            this.BarraBotones.Size = new System.Drawing.Size(701, 39);
             this.BarraBotones.TabIndex = 20;
             this.BarraBotones.Text = "toolStrip1";
             // 
@@ -155,166 +301,21 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Grupo
-            // 
-            this.Grupo.Controls.Add(this.chk_Activo);
-            this.Grupo.Controls.Add(this.label3);
-            this.Grupo.Controls.Add(this.label2);
-            this.Grupo.Controls.Add(this.label1);
-            this.Grupo.Controls.Add(this.label4);
-            this.Grupo.Controls.Add(this.label6);
-            this.Grupo.Controls.Add(this.txt_Celular);
-            this.Grupo.Controls.Add(this.txt_NroDoc);
-            this.Grupo.Controls.Add(this.txt_Email);
-            this.Grupo.Controls.Add(this.txt_Nombre);
-            this.Grupo.Controls.Add(this.txt_Apellido);
-            this.Grupo.Controls.Add(this.txtCodDocente);
-            this.Grupo.ForeColor = System.Drawing.Color.Black;
-            this.Grupo.Location = new System.Drawing.Point(15, 71);
-            this.Grupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Grupo.Name = "Grupo";
-            this.Grupo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Grupo.Size = new System.Drawing.Size(558, 232);
-            this.Grupo.TabIndex = 21;
-            this.Grupo.TabStop = false;
-            this.Grupo.Text = "Ficha Datos Personales";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Enabled = false;
-            this.label3.Location = new System.Drawing.Point(21, 169);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Celular";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(24, 140);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Mail";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(21, 71);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Apellido";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(21, 108);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Nombre";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Enabled = false;
-            this.label6.Location = new System.Drawing.Point(21, 39);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Nro Doc";
-            // 
-            // txt_Celular
-            // 
-            this.txt_Celular.Location = new System.Drawing.Point(101, 169);
-            this.txt_Celular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_Celular.Multiline = true;
-            this.txt_Celular.Name = "txt_Celular";
-            this.txt_Celular.Size = new System.Drawing.Size(424, 24);
-            this.txt_Celular.TabIndex = 9;
-            // 
-            // txt_NroDoc
-            // 
-            this.txt_NroDoc.Location = new System.Drawing.Point(101, 39);
-            this.txt_NroDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_NroDoc.Multiline = true;
-            this.txt_NroDoc.Name = "txt_NroDoc";
-            this.txt_NroDoc.Size = new System.Drawing.Size(159, 24);
-            this.txt_NroDoc.TabIndex = 7;
-            this.txt_NroDoc.TextChanged += new System.EventHandler(this.txt_NroDoc_TextChanged);
-            // 
-            // txt_Email
-            // 
-            this.txt_Email.Location = new System.Drawing.Point(101, 136);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_Email.Multiline = true;
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(424, 24);
-            this.txt_Email.TabIndex = 5;
-            // 
-            // txt_Nombre
-            // 
-            this.txt_Nombre.Location = new System.Drawing.Point(101, 104);
-            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_Nombre.Multiline = true;
-            this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(424, 24);
-            this.txt_Nombre.TabIndex = 3;
-            // 
-            // txt_Apellido
-            // 
-            this.txt_Apellido.Location = new System.Drawing.Point(101, 71);
-            this.txt_Apellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_Apellido.Multiline = true;
-            this.txt_Apellido.Name = "txt_Apellido";
-            this.txt_Apellido.Size = new System.Drawing.Size(424, 24);
-            this.txt_Apellido.TabIndex = 2;
-            // 
-            // txtCodDocente
-            // 
-            this.txtCodDocente.Location = new System.Drawing.Point(281, 39);
-            this.txtCodDocente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCodDocente.Multiline = true;
-            this.txtCodDocente.Name = "txtCodDocente";
-            this.txtCodDocente.Size = new System.Drawing.Size(124, 24);
-            this.txtCodDocente.TabIndex = 0;
-            this.txtCodDocente.Visible = false;
-            // 
-            // chk_Activo
-            // 
-            this.chk_Activo.AutoSize = true;
-            this.chk_Activo.Location = new System.Drawing.Point(101, 201);
-            this.chk_Activo.Name = "chk_Activo";
-            this.chk_Activo.Size = new System.Drawing.Size(77, 24);
-            this.chk_Activo.TabIndex = 16;
-            this.chk_Activo.Text = "Activo";
-            this.chk_Activo.UseVisualStyleBackColor = true;
-            // 
             // FrmAbmDocente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 325);
+            this.ClientSize = new System.Drawing.Size(701, 358);
             this.Controls.Add(this.Grupo);
             this.Controls.Add(this.BarraBotones);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.Name = "FrmAbmDocente";
             this.Text = "Formulario de docenes";
             this.Load += new System.EventHandler(this.FrmAbmDocente_Load);
-            this.BarraBotones.ResumeLayout(false);
-            this.BarraBotones.PerformLayout();
             this.Grupo.ResumeLayout(false);
             this.Grupo.PerformLayout();
+            this.BarraBotones.ResumeLayout(false);
+            this.BarraBotones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
