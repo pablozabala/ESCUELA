@@ -95,7 +95,7 @@ namespace ESCUELA
             //primero busco que no exista
             int b = 0;
             cHorarioDocentecs horario = new cHorarioDocentecs();
-            DataTable trdo = horario.GetHorarioxCodDocente(CodDocente, Hora, CodCurso);
+            DataTable trdo = horario.GetHorarioxCodDocente(CodDocente, Hora, CodCurso, Dia);
             if (trdo.Rows.Count >0)
             {
                 if (trdo.Rows[0]["CodDocente"].ToString ()!="")

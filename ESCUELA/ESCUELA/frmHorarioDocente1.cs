@@ -98,15 +98,19 @@ namespace ESCUELA
                             switch(Dia)
                             {
                                 case "1":
+                                    Grilla.Rows[k].Cells[2].Value = Curso;
                                     break;
                                 case "2":
+                                    Grilla.Rows[k].Cells[3].Value = Curso;
                                     break;
                                 case "3":
+                                    Grilla.Rows[k].Cells[4].Value = Curso;
                                     break;
                                 case "4":
                                     Grilla.Rows[k].Cells[5].Value = Curso;
                                     break;
                                 case "5":
+                                    Grilla.Rows[k].Cells[6].Value = Curso;
                                     break;
                             }
                         }

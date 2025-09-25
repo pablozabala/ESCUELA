@@ -38,13 +38,14 @@ namespace ESCUELA.Clases
             cDb.Grabar(sql);
         }
 
-        public DataTable GetHorarioxCodDocente(int CodDocente,string Hora, int CodCurso)
+        public DataTable GetHorarioxCodDocente(int CodDocente,string Hora, int CodCurso, int Dia)
         {
             string sql = "select * ";
             sql = sql + " from HorarioDocente ";
             sql = sql + " where CodDocente=" + CodDocente.ToString();
             sql = sql + " and Hora =" + "'" + Hora + "'";
             sql = sql + " and CodCurso =" + CodCurso.ToString();
+            sql = sql + " and Dia =" + Dia.ToString();
             return cDb.GetDatatable(sql);
         }
 

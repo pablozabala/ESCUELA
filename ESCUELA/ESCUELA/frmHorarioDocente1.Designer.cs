@@ -48,7 +48,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(745, 441);
+            this.groupBox1.Size = new System.Drawing.Size(981, 532);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horario de Docentes";
@@ -59,7 +59,7 @@
             this.Grilla.Location = new System.Drawing.Point(26, 92);
             this.Grilla.Name = "Grilla";
             this.Grilla.RowTemplate.Height = 28;
-            this.Grilla.Size = new System.Drawing.Size(713, 273);
+            this.Grilla.Size = new System.Drawing.Size(937, 304);
             this.Grilla.TabIndex = 19;
             // 
             // txtCodDocente
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 552);
+            this.ClientSize = new System.Drawing.Size(1005, 570);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmHorarioDocente1";
