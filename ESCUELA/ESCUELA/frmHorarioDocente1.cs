@@ -30,7 +30,7 @@ namespace ESCUELA
         {
             string Nombre = "";
             string Apellido = "";
-            string NomApe = "";
+            string NomApe = "";            
             if (Principal.CodDocente != null)
             {
                 cDocente doc = new Clases.cDocente();
@@ -44,13 +44,14 @@ namespace ESCUELA
                     Nombre = trdo.Rows[0]["Nombre"].ToString();
                     NomApe = Apellido;
                     txtApellido.Text = NomApe;
+                    CargarHorarioxDocente(CodDOcente, 1);
                 }
             }
         }
 
         private void frmHorarioDocente1_Load(object sender, EventArgs e)
         {
-
+            ArmarHorario(1);
         }
 
         private void ArmarHorario(Int32 CodTurno)
@@ -74,6 +75,44 @@ namespace ESCUELA
             Grilla.DataSource = tbHorario;
             fun.AnchoColumnas(Grilla, "10;15;15;15;15;15;15");
 
+        }
+
+        private void CargarHorarioxDocente(Int32 CodDocente, Int32 CodTurno)
+        {
+            string Curso = "";
+            string Hora = "";
+            string Dia = "";
+            cHorarioDocentecs horario = new cHorarioDocentecs();
+            DataTable trdo = horario.GetHorarioxCodDocente(CodDocente, 1);
+            if (trdo.Rows.Count >0)
+            {
+                for (int i = 0; i < trdo.Rows.Count ; i++)
+                {
+                    Hora = trdo.Rows[i]["Hora"].ToString();
+                    Curso = trdo.Rows[i]["Curso"].ToString();
+                    Dia = trdo.Rows[i]["Dia"].ToString();
+                    for (int k = 0; k < Grilla.Rows.Count -1 ; k++)
+                    {
+                        if (Hora == Grilla.Rows[k].Cells[0].Value.ToString ())
+                        {
+                            switch(Dia)
+                            {
+                                case "1":
+                                    break;
+                                case "2":
+                                    break;
+                                case "3":
+                                    break;
+                                case "4":
+                                    Grilla.Rows[k].Cells[5].Value = Curso;
+                                    break;
+                                case "5":
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

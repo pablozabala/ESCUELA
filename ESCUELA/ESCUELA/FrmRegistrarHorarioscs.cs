@@ -78,7 +78,7 @@ namespace ESCUELA
             string Curso = "";
             Curso = GetCursoxCodigo(CodCurso);
             Horario.ModificarHorario(CodCurso, Hora, Lunes, Martes, Miercoles, Jueves, Viernes);
-            GrabarHorarioxCurso(CodDocente, CodCurso, Hora, Curso, CodTurno);
+            GrabarHorarioxCurso(CodDocente, CodCurso, Hora, Curso, CodTurno, (col - 1));
             MessageBox.Show("Datos grabados correctamente ");
             //falta grabar el horario del curso x docente
         }
@@ -90,7 +90,7 @@ namespace ESCUELA
             return Nombre;
         }
 
-        private void GrabarHorarioxCurso(int CodDocente,int CodCurso,string Hora, string Curso, int CodTurno)
+        private void GrabarHorarioxCurso(int CodDocente,int CodCurso,string Hora, string Curso, int CodTurno, int Dia)
         {
             //primero busco que no exista
             int b = 0;
@@ -101,14 +101,14 @@ namespace ESCUELA
                 if (trdo.Rows[0]["CodDocente"].ToString ()!="")
                 {
                     b = 1;
-                    horario.Modificar(CodDocente, CodCurso, Curso, Hora);
+                    horario.Modificar(CodDocente, CodCurso, Curso, Hora, Dia);
                     //modifica
                 }
             }
             if (b==0)
             {
                 //inserta
-                horario.Insertar(CodDocente, CodCurso, Curso, Hora, CodTurno);
+                horario.Insertar(CodDocente, CodCurso, Curso, Hora, CodTurno, Dia);
             }
 
         }

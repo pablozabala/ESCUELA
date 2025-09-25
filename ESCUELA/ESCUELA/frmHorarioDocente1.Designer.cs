@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHorarioDocente1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Grilla = new System.Windows.Forms.DataGridView();
+            this.txtCodDocente = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCodDocente = new System.Windows.Forms.TextBox();
-            this.Grilla = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grilla)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,23 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Horario de Docentes";
+            // 
+            // Grilla
+            // 
+            this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grilla.Location = new System.Drawing.Point(26, 92);
+            this.Grilla.Name = "Grilla";
+            this.Grilla.RowTemplate.Height = 28;
+            this.Grilla.Size = new System.Drawing.Size(713, 273);
+            this.Grilla.TabIndex = 19;
+            // 
+            // txtCodDocente
+            // 
+            this.txtCodDocente.Location = new System.Drawing.Point(366, 40);
+            this.txtCodDocente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodDocente.Name = "txtCodDocente";
+            this.txtCodDocente.Size = new System.Drawing.Size(59, 30);
+            this.txtCodDocente.TabIndex = 18;
             // 
             // btnBuscar
             // 
@@ -82,30 +99,13 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Apellido";
             // 
-            // txtCodDocente
-            // 
-            this.txtCodDocente.Location = new System.Drawing.Point(366, 40);
-            this.txtCodDocente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodDocente.Name = "txtCodDocente";
-            this.txtCodDocente.Size = new System.Drawing.Size(59, 30);
-            this.txtCodDocente.TabIndex = 18;
-            // 
-            // Grilla
-            // 
-            this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(26, 92);
-            this.Grilla.Name = "Grilla";
-            this.Grilla.RowTemplate.Height = 28;
-            this.Grilla.Size = new System.Drawing.Size(713, 273);
-            this.Grilla.TabIndex = 19;
-            // 
             // frmHorarioDocente1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 552);
+            this.ClientSize = new System.Drawing.Size(791, 552);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmHorarioDocente1";
             this.Text = "frmHorarioDocente1";
             this.Load += new System.EventHandler(this.frmHorarioDocente1_Load);
